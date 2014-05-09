@@ -21,7 +21,7 @@ public class Player implements Serializable{
     }
  
         
-
+    // Getter lastname
     public String getLastName() {
         return lastName;
     }
