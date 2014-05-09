@@ -7,6 +7,7 @@
 package besttwoyears;
 
 import besttwoyears.model.Player;
+import besttwoyears.model.mission;
 
 /**
  *
@@ -19,12 +20,20 @@ public class BestTwoYears {
      */
     public static void main(String[] args) {
       Player playerOne = new Player();
+      mission missionOne = new mission();
       
       playerOne.setLastName("Stanger");
       playerOne.setMissionTitle("Elder");
+      missionOne.setMissionName ("Provo, Utah");
+
       
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
+      
+            String missionInfo = missionOne.toString();
+      System.out.println(missionInfo);
+      
+      
     }
     
 }
