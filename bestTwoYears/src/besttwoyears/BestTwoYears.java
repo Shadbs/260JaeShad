@@ -33,6 +33,7 @@ public class BestTwoYears {
       companionOne.setSpiritGage(6.25);
       
       
+      
 
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
