@@ -13,7 +13,7 @@ import besttwoyears.model.BagItems;
 import besttwoyears.model.Leader;
 
 /**
- * Shad is the man
+ *
  * @author Shad & Jae
  */
 public class BestTwoYears {
