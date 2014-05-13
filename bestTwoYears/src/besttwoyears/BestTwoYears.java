@@ -10,11 +10,12 @@ import besttwoyears.model.Player;
 import besttwoyears.model.mission;
 import besttwoyears.model.Companion;
 import besttwoyears.model.BagItems;
+
 import besttwoyears.model.Leader;
 
 /**
  *
- * @author Shad
+ * @author Shad & Jae
  */
 public class BestTwoYears {
 
@@ -26,6 +27,9 @@ public class BestTwoYears {
       mission missionOne = new mission();
       Companion companionOne = new Companion();
       Leader leaderOne = new Leader();
+
+      BagItems BagItemsOne = new BagItems(); 
+
       
       playerOne.setLastName("Stanger");
       playerOne.setMissionTitle("Elder");
@@ -35,7 +39,12 @@ public class BestTwoYears {
       companionOne.setPrideGage(5.50);
       companionOne.setSpiritGage(6.25);
       
+
       leaderOne.setDisappointmentGage(5.50);
+
+      BagItemsOne.setDescription("Scripture");
+      BagItemsOne.setName("Book of Mormon");
+
       
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
@@ -46,9 +55,15 @@ public class BestTwoYears {
       String companionInfo = companionOne.toString();
       System.out.println(companionInfo);
       
+
       String leaderInfo = leaderOne.toString();
       System.out.println(leaderInfo);
 
+
+      String BagItemsInfo = BagItemsOne.toString();
+      System.out.println(BagItemsInfo);
+    }
+
     
 }
-}
+
