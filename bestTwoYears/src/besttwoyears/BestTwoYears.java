@@ -11,6 +11,7 @@ import besttwoyears.model.mission;
 import besttwoyears.model.Companion;
 import besttwoyears.model.BagItems;
 import besttwoyears.model.Leader;
+import besttwoyears.model.People;
 
 /**
  *
@@ -21,13 +22,13 @@ public class BestTwoYears {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args, boolean peopleOneInfo) {
       Player playerOne = new Player();
       mission missionOne = new mission();
       Companion companionOne = new Companion();
       Leader leaderOne = new Leader();
-
-      BagItems BagItemsOne = new BagItems(); 
+      BagItems BagItemsOne = new BagItems();
+      People peopleOne = new People();
 
       
       playerOne.setLastName("Stanger");
@@ -37,13 +38,14 @@ public class BestTwoYears {
       
       companionOne.setPrideGage(5.50);
       companionOne.setSpiritGage(6.25);
-      
 
       leaderOne.setDisappointmentGage(5.50);
 
       BagItemsOne.setDescription("Scripture");
       BagItemsOne.setName("Book of Mormon");
-
+      
+      peopleOne.setName("Brother Karl");
+      peopleOne.setTitle("Investigator");
       
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
@@ -54,13 +56,14 @@ public class BestTwoYears {
       String companionInfo = companionOne.toString();
       System.out.println(companionInfo);
       
-
       String leaderInfo = leaderOne.toString();
       System.out.println(leaderInfo);
 
-
       String BagItemsInfo = BagItemsOne.toString();
       System.out.println(BagItemsInfo);
+      
+      String peopleInfo = peopleOne.toString();
+      System.out.println(peopleOneInfo);
     }
 
     
