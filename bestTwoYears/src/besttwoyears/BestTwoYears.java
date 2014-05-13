@@ -9,7 +9,9 @@ package besttwoyears;
 import besttwoyears.model.Player;
 import besttwoyears.model.mission;
 import besttwoyears.model.Companion;
+import besttwoyears.model.BagItems;
 import besttwoyears.model.Leader;
+
 
 /**
  *
@@ -24,6 +26,7 @@ public class BestTwoYears {
       Player playerOne = new Player();
       mission missionOne = new mission();
       Companion companionOne = new Companion();
+      Leader leaderOne = new Leader();
       
       playerOne.setLastName("Stanger");
       playerOne.setMissionTitle("Elder");
@@ -32,6 +35,8 @@ public class BestTwoYears {
       
       companionOne.setPrideGage(5.50);
       companionOne.setSpiritGage(6.25);
+      
+      leaderOne.setDisappointmentGage(5.50);
       
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
@@ -42,7 +47,8 @@ public class BestTwoYears {
       String companionInfo = companionOne.toString();
       System.out.println(companionInfo);
       
-      
+      String leaderInfo = leaderOne.toString();
+      System.out.println(leaderInfo);
     }
     
 }
