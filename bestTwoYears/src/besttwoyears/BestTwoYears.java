@@ -9,6 +9,7 @@ package besttwoyears;
 import besttwoyears.model.Player;
 import besttwoyears.model.mission;
 import besttwoyears.model.Companion;
+import besttwoyears.model.Leader;
 
 /**
  *
