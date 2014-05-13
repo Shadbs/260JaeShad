@@ -12,7 +12,6 @@ import besttwoyears.model.Companion;
 import besttwoyears.model.BagItems;
 import besttwoyears.model.Leader;
 
-
 /**
  *
  * @author Shad
@@ -49,6 +48,7 @@ public class BestTwoYears {
       
       String leaderInfo = leaderOne.toString();
       System.out.println(leaderInfo);
-    }
+
     
+}
 }
