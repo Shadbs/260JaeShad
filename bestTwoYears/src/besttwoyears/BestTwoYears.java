@@ -11,6 +11,7 @@ import besttwoyears.model.mission;
 import besttwoyears.model.Companion;
 import besttwoyears.model.BagItems;
 import besttwoyears.model.Leader;
+import besttwoyears.model.Investigator;
 
 /**
  * Shad is the man
@@ -26,7 +27,7 @@ public class BestTwoYears {
       mission missionOne = new mission();
       Companion companionOne = new Companion();
       Leader leaderOne = new Leader();
-
+      Investigator investigatorOne = new Investigator();
       BagItems BagItemsOne = new BagItems(); 
 
       
@@ -44,6 +45,7 @@ public class BestTwoYears {
       BagItemsOne.setDescription("Scripture");
       BagItemsOne.setName("Book of Mormon");
 
+      investigatorOne.setUnderstandingGage(4.40);
       
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
@@ -61,6 +63,9 @@ public class BestTwoYears {
 
       String BagItemsInfo = BagItemsOne.toString();
       System.out.println(BagItemsInfo);
+      
+      String investigatorInfo = investigatorOne.toString();
+      System.out.println(investigatorInfo);
     }
 
     
