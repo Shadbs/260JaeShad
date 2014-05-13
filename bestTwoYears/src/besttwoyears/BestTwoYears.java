@@ -14,7 +14,7 @@ import besttwoyears.model.Leader;
 import besttwoyears.model.Investigator;
 
 /**
- * Shad is the man
+ *
  * @author Shad & Jae
  */
 public class BestTwoYears {
