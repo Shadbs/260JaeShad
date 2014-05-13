@@ -10,11 +10,10 @@ import besttwoyears.model.Player;
 import besttwoyears.model.mission;
 import besttwoyears.model.Companion;
 import besttwoyears.model.BagItems;
-
 import besttwoyears.model.Leader;
 
 /**
- *
+ * Shad is the man
  * @author Shad & Jae
  */
 public class BestTwoYears {
