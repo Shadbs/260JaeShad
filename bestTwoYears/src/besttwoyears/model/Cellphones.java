@@ -14,18 +14,19 @@ import java.util.Objects;
 public class Cellphones implements Serializable{
     
     // class instance variable
-    private String call;
+    private double call;
     private String text;
     private String contacts;
 
     public Cellphones() {
     }
 
-    public String getCall() {
+    
+    public double getCall() {
         return call;
     }
 
-    public void setCall(String call) {
+    public void setCall(double call) {
         this.call = call;
     }
 
@@ -53,9 +54,9 @@ public class Cellphones implements Serializable{
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 71 * hash + Objects.hashCode(this.call);
-        hash = 71 * hash + Objects.hashCode(this.text);
-        hash = 71 * hash + Objects.hashCode(this.contacts);
+        hash = 43 * hash + (int) (Double.doubleToLongBits(this.call) ^ (Double.doubleToLongBits(this.call) >>> 32));
+        hash = 43 * hash + Objects.hashCode(this.text);
+        hash = 43 * hash + Objects.hashCode(this.contacts);
         return hash;
     }
 
@@ -68,10 +69,7 @@ public class Cellphones implements Serializable{
             return false;
         }
         final Cellphones other = (Cellphones) obj;
-        if (!Objects.equals(this.call, other.call)) {
-            return false;
-        }
-        if (!Objects.equals(this.text, other.text)) {
+        if (Double.doubleToLongBits(this.call) != Double.doubleToLongBits(other.call)) {
             return false;
         }
         if (!Objects.equals(this.contacts, other.contacts)) {
@@ -79,7 +77,5 @@ public class Cellphones implements Serializable{
         }
         return true;
     }
-    
-    
     
 }
