@@ -22,7 +22,7 @@ public class BestTwoYears {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args, boolean peopleOneInfo) {
+    public static void main(String[] args) {
       Player playerOne = new Player();
       mission missionOne = new mission();
       Companion companionOne = new Companion();
@@ -45,7 +45,7 @@ public class BestTwoYears {
       BagItemsOne.setName("Book of Mormon");
       
       peopleOne.setName("Brother Karl");
-      peopleOne.setTitle("Investigator");
+      peopleOne.setTitle("Inverstigator");
       
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
@@ -63,7 +63,8 @@ public class BestTwoYears {
       System.out.println(BagItemsInfo);
       
       String peopleInfo = peopleOne.toString();
-      System.out.println(peopleOneInfo);
+      System.out.println(peopleInfo);
+  
     }
 
     
