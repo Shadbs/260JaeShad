@@ -11,10 +11,11 @@ import besttwoyears.model.mission;
 import besttwoyears.model.Companion;
 import besttwoyears.model.BagItems;
 import besttwoyears.model.Leader;
-import besttwoyears.model.Investigator;
+import besttwoyears.model.People;
+//import besttwoyears.model.Investigator;
+import besttwoyears.model.Cellphones;
 
 /**
- *
  * @author Shad & Jae
  */
 public class BestTwoYears {
@@ -27,10 +28,11 @@ public class BestTwoYears {
       mission missionOne = new mission();
       Companion companionOne = new Companion();
       Leader leaderOne = new Leader();
-      Investigator investigatorOne = new Investigator();
-      BagItems BagItemsOne = new BagItems(); 
-
-      
+      BagItems BagItemsOne = new BagItems();
+      People peopleOne = new People();
+//      Investigator investigatorOne = new Investigator();
+      Cellphones cellphonesOne = new Cellphones();
+    
       playerOne.setLastName("Stanger");
       playerOne.setMissionTitle("Elder");
       
@@ -38,15 +40,21 @@ public class BestTwoYears {
       
       companionOne.setPrideGage(5.50);
       companionOne.setSpiritGage(6.25);
-      
 
       leaderOne.setDisappointmentGage(5.50);
 
       BagItemsOne.setDescription("Scripture");
       BagItemsOne.setName("Book of Mormon");
-
-      investigatorOne.setUnderstandingGage(4.40);
       
+      peopleOne.setName("Brother Karl");
+      peopleOne.setTitle("Inverstigator");
+
+//      investigatorOne.setUnderstandingGage(4.40);
+      
+      cellphonesOne.setCall("208-496-9999");
+      cellphonesOne.setText("Hi Elders!");
+      cellphonesOne.setContacts("Henry Karl");
+     
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
       
@@ -56,16 +64,21 @@ public class BestTwoYears {
       String companionInfo = companionOne.toString();
       System.out.println(companionInfo);
       
-
       String leaderInfo = leaderOne.toString();
       System.out.println(leaderInfo);
-
 
       String BagItemsInfo = BagItemsOne.toString();
       System.out.println(BagItemsInfo);
       
-      String investigatorInfo = investigatorOne.toString();
-      System.out.println(investigatorInfo);
+
+      String peopleInfo = peopleOne.toString();
+      System.out.println(peopleInfo);
+
+//      String investigatorInfo = investigatorOne.toString();
+//      System.out.println(investigatorInfo);
+      
+      String cellphonesInfo = cellphonesOne.toString();
+      System.out.println(cellphonesInfo);
     }
 
     
