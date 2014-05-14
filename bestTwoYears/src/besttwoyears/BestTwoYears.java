@@ -29,7 +29,6 @@ public class BestTwoYears {
       BagItems BagItemsOne = new BagItems();
       People peopleOne = new People();
 
-      
       playerOne.setLastName("Stanger");
       playerOne.setMissionTitle("Elder");
       
