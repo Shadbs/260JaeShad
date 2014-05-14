@@ -12,6 +12,7 @@ import besttwoyears.model.Companion;
 import besttwoyears.model.BagItems;
 import besttwoyears.model.Leader;
 import besttwoyears.model.People;
+//import besttwoyears.model.Investigator;
 
 /**
  * @author Shad & Jae
@@ -29,6 +30,8 @@ public class BestTwoYears {
       BagItems BagItemsOne = new BagItems();
       People peopleOne = new People();
 
+//      Investigator investigatorOne = new Investigator();
+    
       playerOne.setLastName("Stanger");
       playerOne.setMissionTitle("Elder");
       
@@ -44,6 +47,9 @@ public class BestTwoYears {
       
       peopleOne.setName("Brother Karl");
       peopleOne.setTitle("Inverstigator");
+
+//      investigatorOne.setUnderstandingGage(4.40);
+
       
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
@@ -60,9 +66,14 @@ public class BestTwoYears {
       String BagItemsInfo = BagItemsOne.toString();
       System.out.println(BagItemsInfo);
       
+
       String peopleInfo = peopleOne.toString();
       System.out.println(peopleInfo);
   
+
+//      String investigatorInfo = investigatorOne.toString();
+//      System.out.println(investigatorInfo);
+
     }
 
     
