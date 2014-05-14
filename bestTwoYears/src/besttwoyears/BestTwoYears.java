@@ -14,6 +14,8 @@ import besttwoyears.model.Leader;
 import besttwoyears.model.People;
 //import besttwoyears.model.Investigator;
 import besttwoyears.model.Cellphones;
+import besttwoyears.model.Call;
+
 
 /**
  * @author Shad & Jae
@@ -23,6 +25,7 @@ public class BestTwoYears {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
       Player playerOne = new Player();
       mission missionOne = new mission();
@@ -30,9 +33,10 @@ public class BestTwoYears {
       Leader leaderOne = new Leader();
       BagItems BagItemsOne = new BagItems();
       People peopleOne = new People();
-//      Investigator investigatorOne = new Investigator();
+//    Investigator investigatorOne = new Investigator();
       Cellphones cellphonesOne = new Cellphones();
-    
+      Call callOne = new Call();
+     
       playerOne.setLastName("Stanger");
       playerOne.setMissionTitle("Elder");
       
@@ -49,11 +53,14 @@ public class BestTwoYears {
       peopleOne.setName("Brother Karl");
       peopleOne.setTitle("Inverstigator");
 
-//      investigatorOne.setUnderstandingGage(4.40);
+//    investigatorOne.setUnderstandingGage(4.40);
       
-      cellphonesOne.setCall("208-496-9999");
+      cellphonesOne.setCall(208-496-9999);
       cellphonesOne.setText("Hi Elders!");
       cellphonesOne.setContacts("Henry Karl");
+      
+      callOne.setReceiveCall("Receive");
+      callOne.setSendCall("Call");
      
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
@@ -70,15 +77,17 @@ public class BestTwoYears {
       String BagItemsInfo = BagItemsOne.toString();
       System.out.println(BagItemsInfo);
       
-
       String peopleInfo = peopleOne.toString();
       System.out.println(peopleInfo);
 
-//      String investigatorInfo = investigatorOne.toString();
-//      System.out.println(investigatorInfo);
+//    String investigatorInfo = investigatorOne.toString();
+//    System.out.println(investigatorInfo);
       
       String cellphonesInfo = cellphonesOne.toString();
       System.out.println(cellphonesInfo);
+      
+      String callInfo = callOne.toString();
+      System.out.println(callInfo);
     }
 
     
