@@ -1,10 +1,10 @@
 /*
- * TeachingControl class
+ * prepDayControl class
  */
 package besttwoyears.control;
 
 /**
- * @author Jae Lee
+ * @author Shad Stanger
  */
 public class prepDay {
 
