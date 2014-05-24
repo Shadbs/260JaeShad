@@ -19,7 +19,7 @@ public class ProselytingControl {
                 newPP = PP/RN;
                 
                 System.out.println("New S.P: " + newSP);
-                System.out.println("New S.P: " + newPP);
+                System.out.println("New P.P: " + newPP);
                 break;
                 
             case 'b':   // AskingNumber
@@ -27,7 +27,7 @@ public class ProselytingControl {
                 newPP = PP/RN;
                 
                 System.out.println("New S.P: " + newSP);
-                System.out.println("New S.P: " + newPP);
+                System.out.println("New P.P: " + newPP);
                 break;
                 
             case 'c':   // handPassAlongCard
@@ -35,7 +35,7 @@ public class ProselytingControl {
                 newPP = PP + RN;
                 
                 System.out.println("New S.P: " + newSP);
-                System.out.println("New S.P: " + newPP);
+                System.out.println("New P.P: " + newPP);
                 break;
                 
             case 'd':
@@ -43,7 +43,7 @@ public class ProselytingControl {
                 newPP = PP - RN;
                 
                 System.out.println("New S.P: " + newSP);
-                System.out.println("New S.P: " + newPP);
+                System.out.println("New P.P: " + newPP);
                 break;
         }
         
