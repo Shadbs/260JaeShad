@@ -20,4 +20,8 @@ public class ProgramControl {
         
         return player;
     }
+    
+    public void saveGame(){
+        System.out.println("***Save menu displayMenu stub function called ***");
+    }
 }
