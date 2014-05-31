@@ -5,7 +5,6 @@
  */
 package besttwoyears.view;
 
-
 import besttwoyears.BestTwoYears;
 import besttwoyears.control.ProgramControl;
 import java.util.Scanner;
@@ -17,24 +16,25 @@ import java.util.Scanner;
 public class MainMenuView {
 
     private static final String MENU = "/n"
-            + "/n---------------------------------"
-            + "/n Main Menu"
-            + "/n---------------------------------"
+            + "/n-------------------------------------"
+            + "/n| Main Menu                         |"                      
+            + "/n-------------------------------------"
             + "/n G - Start Game"
             + "/n H - Get help on how to play the game"
             + "/n S - Save Game"
-            + "/n E - Exit Game";
+            + "/n E - Exit Game"
+            + "/n-------------------------------------";
 
     public void displayMenu() {
         char selection = ' ';
         do {
-            System.out.println(MENU);
+            System.out.println(MENU);       // Display MainMenu
 
-            String input = this.getInput();
-            selection = input.charAt(0);
+            String input = this.getInput(); // get user's selection
+            selection = input.charAt(0);    // get first character of string
 
-            this.doAction(selection);
-        } while (selection != 'E');
+            this.doAction(selection);       // Do action based on selection
+        } while (selection != 'E');         // an selection isn't "Exit"
     }
 
     public String getInput() {

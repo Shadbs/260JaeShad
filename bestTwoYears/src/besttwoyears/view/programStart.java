@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * ProgramStart class
  */
 package besttwoyears.view;
 
@@ -10,14 +8,16 @@ import besttwoyears.model.Player;
 import java.util.Scanner;
 
 /**
- *
  * @author Shad
  */
 public class programStart {
 
     public void banner() {
         //banner: this is displays when run
-        System.out.println("Hello future missionary welcome to the Best Two years, here you will have the experience of a lifetime! \n you have been chosen to represent our Lord Jesus Christ and preach His gospel for 2 years of your life");
+        System.out.println("\n Hello future missionary welcome to the Best Two years,  "
+                         + "\n here you will have the experience of a lifetime!        "
+                         + "\n you have been chosen to represent our Lord Jesus Christ "
+                         + "\n and preach His gospel for 2 years of your life          ");
 
     }
 
@@ -41,33 +41,27 @@ public class programStart {
             } else {
                 valid = true;
             }
-
         }
         return playerName;
     }
 
     public void displayWelcome(Player player) {
         System.out.println("Welcome Elder " + player.getLastName());
-
     }
 
-
-
 public programStart() {
-        this.banner();
+        this.banner();                              //display the banner screen
 
-        String playerName = this.getPlayerName();
-        if (playerName == null) {
-            return;
-        }
+        String playerName = this.getPlayerName();   // prompt the player to input thier name, retrieve the player name. 
+        if (playerName == null) {                   // User wants to Quit
+                return;                             // Exit the game
+            }
+            
+        Player player = ProgramControl.createPlayer(playerName); // Create player objects & Save it in the programContorl Class
 
-        Player player = ProgramControl.createPlayer(playerName);
+        this.displayWelcome(player);                // Print DisplayWelcome (message)
 
-        this.displayWelcome(player);
-
-        MainMenuView mainMenuView = new MainMenuView();
+        MainMenuView mainMenuView = new MainMenuView(); // Dislay the MainMenu
         mainMenuView.displayMenu();
-
-        
     }
 }
