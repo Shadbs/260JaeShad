@@ -15,9 +15,9 @@ public class ProgramStartView {
     public void banner() {
         //banner: this is displays when run
         System.out.println("\n Hello future missionary welcome to the Best Two years,  "
-                         + "\n here you will have the experience of a lifetime!        "
-                         + "\n you have been chosen to represent our Lord Jesus Christ "
-                         + "\n and preach His gospel for 2 years of your life          ");
+                + "\n here you will have the experience of a lifetime!        "
+                + "\n you have been chosen to represent our Lord Jesus Christ "
+                + "\n and preach His gospel for 2 years of your life          ");
 
     }
 
@@ -45,19 +45,47 @@ public class ProgramStartView {
         return playerName;
     }
 
-    public void displayWelcome(Player player) {
-        System.out.println("Welcome Elder " + player.getLastName());
+    public String getMissionTitle() {
+        boolean valid = false;
+        String missionTitle = null;
+        Scanner keyboard = new Scanner(System.in);
+
+        while (!valid) {
+            System.out.println("Are you a Sister or Elder? E-Elder or S-Sister:");
+
+            missionTitle = keyboard.nextLine();
+            missionTitle = missionTitle.trim();
+
+           
+            if ('E' == missionTitle.toUpperCase().charAt(0)){
+                missionTitle = "Elder";
+                valid = true;
+            } else if ('S' == missionTitle.toUpperCase().charAt(0)){
+                missionTitle = "Sister";
+                valid = true;
+            }
+             if (missionTitle.toUpperCase().equals("Q")) {
+                return null;
+            }
+        }
+        return missionTitle;
+        
     }
 
-public ProgramStartView() {
+    public void displayWelcome(Player player) {
+        System.out.println("Welcome " + player.getMissionTitle() + " " + player.getLastName());
+    }
+
+    public ProgramStartView() {
         this.banner();                              //display the banner screen
 
+        String missionTitle = this.getMissionTitle(); //Asks for the missonary title
         String playerName = this.getPlayerName();   // prompt the player to input thier name, retrieve the player name. 
         if (playerName == null) {                   // User wants to Quit
-                return;                             // Exit the game
-            }
-            
-        Player player = ProgramControl.createPlayer(playerName); // Create player objects & Save it in the programContorl Class
+            return;                             // Exit the game
+        }
+
+        Player player = ProgramControl.createPlayer(playerName, missionTitle); // Create player objects & Save it in the programContorl Class
 
         this.displayWelcome(player);                // Print DisplayWelcome (message)
 

@@ -1,7 +1,6 @@
 /*
  * HelpMenuView
  */
-
 package besttwoyears.view;
 
 import besttwoyears.BestTwoYears;
@@ -12,17 +11,17 @@ import java.util.Scanner;
  * @author Jae Lee
  */
 public class HelpMenuView {
-    
+
     private static final String HelpMENU = "\n"
             + "\n-------------------------------------"
-            + "\n|             Help Menu             |"                      
+            + "\n|             Help Menu             |"
             + "\n-------------------------------------"
             + "\n G - Goal of the Game"
             + "\n M - How To Move                     "
             + "\n A - Making & Keep Appoinments       "
             + "\n P - Understanding the Planner       "
-            + "\n T - Understanding P-Day Task        "           
-            + "\n Q - Quit                            "           
+            + "\n T - Understanding P-Day Task        "
+            + "\n E - Exit to Main Menu               "
             + "\n-------------------------------------";
 
     public void displayMenu() {
@@ -56,8 +55,8 @@ public class HelpMenuView {
 
         }
         return playerChoice;
-    }    
-    
+    }
+
     public void doAction(char playerChoice) {
 
         switch (playerChoice) {
@@ -79,10 +78,14 @@ public class HelpMenuView {
             case 'T': // Understanding P-Day Task 
                 prepDay.prepDay(BestTwoYears.getCurrentGame());
                 break;
+            case 'E': // Understanding P-Day Task 
+                MainMenuView mainMenu = new MainMenuView();
+                mainMenu.displayMenu();
+                break;
 
             default:
                 System.out.println("***Please Choose Option again***");
-                break;                  
+                break;
         }
 
     }
