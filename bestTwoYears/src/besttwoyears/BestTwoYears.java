@@ -55,9 +55,10 @@ public class BestTwoYears {
         Cellphones cellphonesOne = new Cellphones();
         Call callOne = new Call();
 
-        
-
         new programStart();
+        // Create HelpMenuView and Disply HelpMenu
+        programStart programStart(); = new programStart();
+        
 
     }
 
