@@ -10,7 +10,7 @@ import java.util.Scanner;
 /**
  * @author Shad
  */
-public class programStart {
+public class ProgramStartView {
 
     public void banner() {
         //banner: this is displays when run
@@ -49,7 +49,7 @@ public class programStart {
         System.out.println("Welcome Elder " + player.getLastName());
     }
 
-public programStart() {
+public ProgramStartView() {
         this.banner();                              //display the banner screen
 
         String playerName = this.getPlayerName();   // prompt the player to input thier name, retrieve the player name. 
@@ -63,5 +63,9 @@ public programStart() {
 
         MainMenuView mainMenuView = new MainMenuView(); // Dislay the MainMenu
         mainMenuView.displayMenu();
+    }
+
+    public void programStart() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
