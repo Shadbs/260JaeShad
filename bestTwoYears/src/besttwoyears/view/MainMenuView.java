@@ -73,7 +73,7 @@ public class MainMenuView {
                 HelpMenuView helpMenu = new HelpMenuView();
                 helpMenu.displayMenu();
                 break;
-            case 'S':// save the vurrent game to disk
+            case 'S':// save the current game to disk
                 ProgramControl.saveGame(BestTwoYears.getCurrentGame());
                 break;
             default:

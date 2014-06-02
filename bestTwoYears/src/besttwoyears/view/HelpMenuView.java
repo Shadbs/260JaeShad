@@ -4,6 +4,10 @@
 
 package besttwoyears.view;
 
+import besttwoyears.BestTwoYears;
+import besttwoyears.control.ProgramControl;
+import java.util.Scanner;
+
 /**
  * @author Jae Lee
  */
@@ -11,44 +15,75 @@ public class HelpMenuView {
     
     private static final String HelpMENU = "\n"
             + "\n-------------------------------------"
-            + "\n| Main Menu                         |"                      
+            + "\n|             Help Menu             |"                      
             + "\n-------------------------------------"
-            + "\n G - Start Game"
-            + "\n H - Get help on how to play the game"
-            + "\n S - Save Game"
-            + "\n E - Exit Game"
+            + "\n G - Goal of the Game"
+            + "\n M - How To Move                     "
+            + "\n A - Making & Keep Appoinments       "
+            + "\n P - Understanding the Planner       "
+            + "\n T - Understanding P-Day Task        "           
+            + "\n Q - Quit                            "           
             + "\n-------------------------------------";
-        
-        // display the banner screen
-        this.displayHelpBanner();
-        
-        // propmt the player to enter ther choice 
-        
-        // create and save the player object?
-        
-        // display a menu?
-        
-        // display the help menu
-     
-        System.out.println("***Help menu displayMenu stub function called ***");
+
+    public void displayMenu() {
+        char selection = ' ';
+        do {
+            System.out.println(HelpMENU);       // Display MainMenu
+
+            String input = this.getInput();     // get user's selection & See "getInput()"
+            selection = input.charAt(0);        // get first character of string
+
+            this.doAction(selection);           // Do action based on selection & See "doAction()"
+        } while (selection != 'Q');             // an selection isn't "Exit"
     }
 
-    private void displayHelpBanner() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("*************************************************");        
-        System.out.println("*                                               *"
-                        +"\n* This is Your Help Guide for Mission Prep Game *");
-//                        +"\n*-----------------------------------------------*"
-//                        +"\n* G - What is the Goal of the Mission?          *"
-//                        +"\n* M - How to move                               *"
-//                        +"\n* E - Understanding of Missionary Planner       *"
-//                        +"\n* H - Arranging & Keeping Appoinments           *"
-//                        +"\n* D - Understanding Preparation-Day Tasks       *"
-//                        +"\n* Q - Quit                                      *"
-//                        +"\n*-----------------------------------------------*");
-        System.out.println("*************************************************");
-       System.out.println("***Help menu displayMenu stub function called ***");
+    public String getInput() {
+        boolean valid = false;
+        String playerChoice = null;
+        Scanner keyboard = new Scanner(System.in);
 
+        while (!valid) {
+            System.out.println("Enter Choice");
+
+            playerChoice = keyboard.nextLine();
+            playerChoice = playerChoice.trim();
+
+            if (playerChoice.toUpperCase().equals("Q")) {
+                return null;
+            } else {
+                valid = true;
+            }
+
+        }
+        return playerChoice;
+    }    
     
+    public void doAction(char playerChoice) {
+
+        switch (playerChoice) {
+            case 'G':// Goal of the Game, Display for direction
+                People.toString(besttwoyears.getCurrrent);
+                gameGoal.displayGoal();
+                break;
+            case 'M': // How to Move, Display for direction
+                GameMove gameMove = new GameMove();
+                gameGoal.displayMove();
+                break;
+            case 'A':// Making & Keep Appoinments
+                Call.toString();
+                break;
+            case 'P':// Understanding the Planner
+                GamePlanner gamePlanner = new GamePlanner();
+                gamePlanner.displayAppoinment();
+                break;
+            case 'T': // Understanding P-Day Task 
+                prepDay.prepDay(BestTwoYears.getCurrentGame());
+                break;
+
+            default:
+                System.out.println("***Please Choose Option again***");
+                break;                  
+        }
+
     }
 }

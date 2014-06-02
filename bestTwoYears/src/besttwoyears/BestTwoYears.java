@@ -15,6 +15,7 @@ import besttwoyears.model.Leader;
 import besttwoyears.model.People;
 import besttwoyears.model.Player;
 import besttwoyears.model.mission;  
+import besttwoyears.view.HelpMenuView;
 import besttwoyears.view.ProgramStartView;
   
 
@@ -48,8 +49,13 @@ public class BestTwoYears {
      */
     public static void main(String[] args) {
         ProgramStartView ProgramStartView = new ProgramStartView();
-        ProgramStartView.programStart();   
-
+        ProgramStartView.programStart();  
+        
+        // Jae: I create this for Help Menu Connection to 
+        HelpMenuView helpMenuView = new HelpMenuView();
+        HelpMenuView.helpMenu();
+                
+                
     }
 
 }

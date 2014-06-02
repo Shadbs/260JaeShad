@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Control
  */
 package besttwoyears.control;
 
@@ -9,7 +7,6 @@ import besttwoyears.model.Game;
 import besttwoyears.model.Player;
 
 /**
- *
  * @author Shad
  */
 public class ProgramControl {
@@ -23,7 +20,7 @@ public class ProgramControl {
     }
 
     public static void saveGame(Game currentGame) {
-        System.out.println("***Save menu displayMenu stub function called ***");
+        System.out.println("***'Save Menu' displayMenu stub function called ***");
     }
    
     
