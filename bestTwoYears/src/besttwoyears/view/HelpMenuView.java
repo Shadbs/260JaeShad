@@ -1,15 +1,23 @@
 /*
- * Help Menu
+ * HelpMenuView
  */
 
 package besttwoyears.view;
 
 /**
- * @author Jae
+ * @author Jae Lee
  */
 public class HelpMenuView {
     
-    public void displayMenu() {
+    private static final String HelpMENU = "\n"
+            + "\n-------------------------------------"
+            + "\n| Main Menu                         |"                      
+            + "\n-------------------------------------"
+            + "\n G - Start Game"
+            + "\n H - Get help on how to play the game"
+            + "\n S - Save Game"
+            + "\n E - Exit Game"
+            + "\n-------------------------------------";
         
         // display the banner screen
         this.displayHelpBanner();

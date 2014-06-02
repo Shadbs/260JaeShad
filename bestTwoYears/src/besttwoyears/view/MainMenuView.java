@@ -17,7 +17,7 @@ public class MainMenuView {
 
     private static final String MENU = "\n"
             + "\n-------------------------------------"
-            + "\n| Main Menu                         |"                      
+            + "\n|             Main Menu             |"                      
             + "\n-------------------------------------"
             + "\n G - Start Game"
             + "\n H - Get help on how to play the game"
