@@ -68,15 +68,15 @@ public class HelpMenuView {
                 GameMove gameMove = new GameMove();
                 gameGoal.displayMove();
                 break;
-            case 'A':// Making & Keep Appoinments
+            case 'C':// Making & Keep Appoinments
                 Call.toString();
                 break;
             case 'P':// Understanding the Planner
                 GamePlanner gamePlanner = new GamePlanner();
-                gamePlanner.displayAppoinment();
+                gamePlanner.displayMenu();
                 break;
             case 'T': // Understanding P-Day Task 
-                prepDay.prepDay(BestTwoYears.getCurrentGame());
+                prepDay.prepDay(BestTwoYears.getCurSrentGame());
                 break;
             case 'E': // Understanding P-Day Task 
                 MainMenuView mainMenu = new MainMenuView();

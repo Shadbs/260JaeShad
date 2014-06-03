@@ -56,20 +56,23 @@ public class ProgramStartView {
             missionTitle = keyboard.nextLine();
             missionTitle = missionTitle.trim();
 
-           
-            if ('E' == missionTitle.toUpperCase().charAt(0)){
+            if ('E' == missionTitle.toUpperCase().charAt(0)) {
                 missionTitle = "Elder";
                 valid = true;
-            } else if ('S' == missionTitle.toUpperCase().charAt(0)){
+            } else if ('S' == missionTitle.toUpperCase().charAt(0)) {
                 missionTitle = "Sister";
                 valid = true;
             }
-             if (missionTitle.toUpperCase().equals("Q")) {
+            if (missionTitle.toUpperCase().equals("Q")) {
                 return null;
+            }
+
+            if (missionTitle.length() < 2) {
+                System.out.println("Invalid Name please enter again, must be more than 2 characters");
             }
         }
         return missionTitle;
-        
+
     }
 
     public void displayWelcome(Player player) {
@@ -80,6 +83,9 @@ public class ProgramStartView {
         this.banner();                              //display the banner screen
 
         String missionTitle = this.getMissionTitle(); //Asks for the missonary title
+        if (missionTitle == null) {
+            return;
+        }
         String playerName = this.getPlayerName();   // prompt the player to input thier name, retrieve the player name. 
         if (playerName == null) {                   // User wants to Quit
             return;                             // Exit the game
