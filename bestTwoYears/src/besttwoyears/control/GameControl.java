@@ -1,7 +1,5 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
  */
 package besttwoyears.control;
 
@@ -9,13 +7,11 @@ import besttwoyears.BestTwoYears;
 import besttwoyears.model.Game;
 
 /**
- *
  * @author Shad
  */
 class GameControl {
 
     private static Game game;
-
     public static void startNewGame() {
 
         GameControl.game = new Game();
@@ -47,6 +43,5 @@ class GameControl {
     public static void createMap(){
         System.out.println("calls the createMap");
     }
-    
     
 }

@@ -33,7 +33,7 @@ public class HelpMenuView {
             selection = input.charAt(0);        // get first character of string
 
             this.doAction(selection);           // Do action based on selection & See "doAction()"
-        } while (selection != 'Q');             // an selection isn't "Exit"
+        } while (selection != 'E');             // an selection isn't "Exit"
     }
 
     public String getInput() {

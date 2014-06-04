@@ -14,8 +14,9 @@ public class GameCall {
                 +"\n *******************************************************"
                 +"\n ------Call Menu displayMenu stub function called-------"
                 +"\n    C - Make a Phone Call                               "
-                +"\n    R - Receive Phone Call                              "
-                +"\n    T - Text to others                                  "
+                +"\n    T - Answering a Text                                "
+                +"\n    N – Look up a contacts Number                       "
+                +"\n    Q – Exit                                            "
                 +"\n *******************************************************");
     }   
 }
