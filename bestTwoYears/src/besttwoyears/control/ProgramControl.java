@@ -3,6 +3,7 @@
  */
 package besttwoyears.control;
 
+import besttwoyears.BestTwoYears;
 import besttwoyears.model.Game;
 import besttwoyears.model.Player;
 
@@ -23,6 +24,5 @@ public class ProgramControl {
     public static void saveGame(Game currentGame) {
         System.out.println("***'Save Menu' displayMenu stub function called ***");
     }
-   
     
 }
