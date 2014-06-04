@@ -51,13 +51,12 @@ public class BestTwoYears {
     public static void main(String[] args) {
         ProgramStartView ProgramStartView = new ProgramStartView();
         ProgramStartView.programStart();  
-        
-        // Jae: I create this for Help Menu Connection to 
-        HelpMenuView helpMenuView = new HelpMenuView();
-        HelpMenuView.helpMenu();
+         
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayMenu();
         
         MainMenuView mainMenu = new MainMenuView();
-        MainMenuView.mainMenu();
+        mainMenu.displayMenu();
                 
                 
     }

@@ -17,7 +17,7 @@ public class prepDay {
         double fastFood = 7;
 
         switch (choice) {
-            case 'a': // buy grocries
+            case 'G': // buy grocries
                 newFund = cFund - ((price * taxRate) + price);
                 newHP = HP + 20;
 
@@ -25,7 +25,7 @@ public class prepDay {
                 System.out.println("New HP:" + newHP + "%");
                 break;
 
-            case 'b': // do laundry
+            case 'L': // do laundry
                 newFund = cFund - 3;
                 newHP = HP + 10;
 
@@ -33,7 +33,7 @@ public class prepDay {
                 System.out.println("New HP:" + newHP + "%");
                 break;
 
-            case 'c': // buying fast food
+            case 'F': // buying fast food
                 newFund = cFund - ((fastFood * taxRate) + fastFood);
                 newHP = HP + 30;
 
