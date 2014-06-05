@@ -4,44 +4,100 @@
 package besttwoyears.control;
 
 import besttwoyears.BestTwoYears;
-import besttwoyears.model.Game;
+import besttwoyears.model.*;
+import besttwoyears.view.*;
 
 /**
- * @author Shad
+ * @author Shad & Jae
  */
 class GameControl {
 
     private static Game game;
-    public static void startNewGame() {
 
+    public static void startNewGame() {
+        // create a new game
         GameControl.game = new Game();
 
+        // save as current game
         BestTwoYears.setCurrentGame(game);
 
-        GameControl.createBagItemsList();
-        GameControl.createPeopleList();
-        GameControl.createCellPhone();
-        GameControl.createPlanner();
-        GameControl.createMap();
+        GameControl.createBagItemsList();   // create bagItems list
+        GameControl.createPeopleList();     // create people list
+        GameControl.createCellPhone();      // create the cellphone
+        GameControl.createPlanner();        // create the planner
+        GameControl.createMap();            // create & initialize the map
 
+        // move player to starting position
         MapControl.locatePeople();
     }
 
+    public static void startSavedGame() {
+        System.out.println("\n Calling startSaveGame Stub function");
+    }
+
     public static void createBagItemsList() {
-        System.out.println("Calls the BagItemsList");
+        // String[] bagItems = new String[Constants.NUMBER_OF_BAGITEMS];    Keep this?
+
+        // create array list of inventory items
+        BagItems[] bagitems = new BagItems[Constants.NUMBER_OF_BAGITEMS];
+
+        BagItems scripture = new BagItems();
+        scripture.setDescription("Scripture");
+        scripture.setQuantityInStock(0);
+        scripture.setRequiredAmount(0);
+        BagItems[Constants.SCRIPTURE] = scripture;
+
+        BagItems bookofMormon = new BagItems();
+        bookofMormon.setDescription("Book of Mormon");
+        bookofMormon.setQuantityInStock(0);
+        bookofMormon.setRequiredAmount(0);
+        BagItems[Constants.BOOKOFMORMON] = bookofMormon;
+
+        BagItems passAlongCard = new BagItems();
+        passAlongCard.setDescription("Pass-Along Card");
+        passAlongCard.setQuantityInStock(0);
+        passAlongCard.setRequiredAmount(0);
+        BagItems[Constants.PASSALONGCARD] = passAlongCard;
+
+        BagItems familyPics = new BagItems();
+        familyPics.setDescription("Family Picture");
+        familyPics.setQuantityInStock(0);
+        familyPics.setRequiredAmount(0);
+        BagItems[Constants.FAMILYPICS] = familyPics;
     }
 
     public static void createPeopleList() {
-        System.out.println("calls the createPeopleList");
+        String[] people = new String[Constants.NUMBER_OF_PEOPLE];
+
+        people[Constants.MISSIONPRESIDENT] = "Mission President";
+        people[Constants.BISHOP] = "Bishop";
+        people[Constants.JACKSON] = "Mr. Jackson";
+        people[Constants.SMITH] = "Brother Smith";
+        people[Constants.SAM] = "Sam";
+        people[Constants.JACOB] = "Jacob";
+        people[Constants.ALEJANDRA] = "Alejandra";
+        people[Constants.MIN] = "Min";
+
+        GameControl.game.setPeople(people);
     }
-    public static void createCellPhone(){
-        System.out.println("calls the createCellPhone");
+
+    public static void createCellPhone() {  
+
+        // How to connect GameCall(view)?
+        Cellphones cellphone = new Cellphones();
+        System.out.println("\n Calling the createCellPhone stub function");
     }
-    public static void createPlanner(){
-        System.out.println("calls the createPlanner");
+
+    public static void createPlanner() {    
+        
+        // How to connect GamePlanner(view)?
+        GamePlanner gamePlanner = new GamePlanner();
+        System.out.println("\n Calling the createPlanner stub function");
     }
-    public static void createMap(){
-        System.out.println("calls the createMap");
+
+    public static void createMap() {
+        // Two dimentional array thing
+        System.out.println("\n Calling the createMap stub function");
     }
-    
+
 }
