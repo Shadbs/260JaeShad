@@ -4,7 +4,7 @@
 package besttwoyears.view;
 
 import besttwoyears.BestTwoYears;
-import besttwoyears.control.ProgramControl;
+import besttwoyears.control.*;
 import java.util.Scanner;
 
 /**
@@ -18,7 +18,7 @@ public class HelpMenuView {
             + "\n-------------------------------------"
             + "\n G - Goal of the Game                "
             + "\n M - How To Move                     "
-            + "\n A - Making & Keep Appoinments       "
+            + "\n C - Making & Keep Appoinments(Phone)"
             + "\n P - Understanding the Planner       "
             + "\n T - Understanding P-Day Task        "
             + "\n E - Exit to Main Menu               "

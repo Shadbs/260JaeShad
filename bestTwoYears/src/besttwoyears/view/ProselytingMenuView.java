@@ -1,5 +1,5 @@
 /*
- * View: Proselyting
+ * View: ProselytingView
  */
 
 package besttwoyears.view;
@@ -10,7 +10,7 @@ import java.util.Scanner;
 /**
  * @author Jae Lee
  */
-public class Proselyting {
+public class ProselytingMenuView {
     
     private static final String MENU = "\n"
             + "\n --------------------------------------------"
@@ -22,7 +22,20 @@ public class Proselyting {
             + "\n  H - Exit to Help Menu                      "
             + "\n --------------------------------------------";
     
-    public String getInput() {
+    
+    public void displayMenu() {
+        char selection = ' ';
+        do {
+            System.out.println(MENU);       // Display MainMenu
+
+            String input = this.getInput(); // get user's selection
+            selection = input.charAt(0);    // get first character of string
+
+            this.doAction(selection);       // Do action based on selection
+        } while (selection != 'E');         // an selection isn't "Exit"
+    }
+    
+    public String getInput() {              // Use this as templete
         boolean valid = false;
         String playerChoice = null;
         Scanner keyboard = new Scanner(System.in);
@@ -51,7 +64,6 @@ public class Proselyting {
 
         switch (playerChoice) {
             case 'P': // connection to ProselytingControl
-                // Should Create
                 ProselytingControl proselytingChoice = new ProselytingControl();
                 proselytingChoice.calProselyting('a', 5, 2); // dummy return values
                 break;
@@ -60,9 +72,9 @@ public class Proselyting {
                 TeachingControl teachingChoice = new TeachingControl();
                 teachingChoice.calTeaching('c', 5, 2); // dummy return values
             
-            case 'S': // returning back to help menu
-                HelpMenuView helpMenu = new HelpMenuView();
-                helpMenu.displayMenu();
+            case 'S': // connection to ServiceControl
+                ServiceControl serviceControl = new ServiceControl();
+                serviceControl.calServiceControl('b', 5, 2); // dummy return values
                                             
             case 'H': // returning back to help menu
                 HelpMenuView helpMenu = new HelpMenuView();

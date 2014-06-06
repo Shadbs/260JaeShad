@@ -40,31 +40,31 @@ class GameControl {
         // String[] bagItems = new String[Constants.NUMBER_OF_BAGITEMS];    Keep this?
 
         // create array list of inventory items
-        BagItems[] bagitems = new BagItems[Constants.NUMBER_OF_BAGITEMS];
+        BagItems[] bagItems = new BagItems[Constants.NUMBER_OF_BAGITEMS];
 
         BagItems scripture = new BagItems();
         scripture.setDescription("Scripture");
         scripture.setQuantityInStock(0);
         scripture.setRequiredAmount(0);
-        BagItems[Constants.SCRIPTURE] = scripture;
+        bagItems[Constants.SCRIPTURE] = scripture;
 
         BagItems bookofMormon = new BagItems();
         bookofMormon.setDescription("Book of Mormon");
         bookofMormon.setQuantityInStock(0);
         bookofMormon.setRequiredAmount(0);
-        BagItems[Constants.BOOKOFMORMON] = bookofMormon;
+        bagItems[Constants.BOOKOFMORMON] = bookofMormon;
 
         BagItems passAlongCard = new BagItems();
         passAlongCard.setDescription("Pass-Along Card");
         passAlongCard.setQuantityInStock(0);
         passAlongCard.setRequiredAmount(0);
-        BagItems[Constants.PASSALONGCARD] = passAlongCard;
+        bagItems[Constants.PASSALONGCARD] = passAlongCard;
 
         BagItems familyPics = new BagItems();
         familyPics.setDescription("Family Picture");
         familyPics.setQuantityInStock(0);
         familyPics.setRequiredAmount(0);
-        BagItems[Constants.FAMILYPICS] = familyPics;
+        bagItems[Constants.FAMILYPICS] = familyPics;
     }
 
     public static void createPeopleList() {
@@ -103,8 +103,8 @@ class GameControl {
         // Two dimentional array thing, Plan: 5x5=25 scene
         // System.out.println("\n Calling the createMap stub function");
         
-        location[][] map = new Location[Constants.MAP_ROW_COUNT][Constants.MAP_COLUMN_COUNT];
-        Location location = new Location();
+//        Location[][] map = new Location[Constants.MAP_ROW_COUNT][Constants.MAP_COLUMN_COUNT];
+//        Location location = new Location();
         
         for (int row = 0; row < Constants.MAP_ROW_COUNT; row++) {
             for (int column = 0; column < Constants.MAP_COLUMN_COUNT; column++) {
