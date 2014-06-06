@@ -1,5 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ *
  */
 package besttwoyears.control;
 
@@ -100,16 +100,33 @@ class GameControl {
     }
 
     public static void createMap() {
-        // Two dimentional array thing, Plan: 5x5=25 scene
-        // System.out.println("\n Calling the createMap stub function");
+        // Two dimentional array thing, Plan: 5x5=25 scene, Scene/Map/Location Class in Model.
         
+        // 1. Create Initialized map
+        Map map = new Map();
+        
+        // 2. Create a list of Events
+        Scene[] scenes = createScenes(); // just like createScenes items
+        
+        // 3. Assign Events to location to map
+        assginScenes(map, scenes);   
+
+//        Here is Old Direction for the Class
 //        Location[][] map = new Location[Constants.MAP_ROW_COUNT][Constants.MAP_COLUMN_COUNT];
-//        Location location = new Location();
-        
-        for (int row = 0; row < Constants.MAP_ROW_COUNT; row++) {
-            for (int column = 0; column < Constants.MAP_COLUMN_COUNT; column++) {
-            }
+//        Location location = new Location();        
+//        for (int row = 0; row < Constants.MAP_ROW_COUNT; row++) {
+//            for (int column = 0; column < Constants.MAP_COLUMN_COUNT; column++) {}
         }
+
+    private static Scene[] createScenes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    private static void assginScenes(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    }
+    
+    
 
 }
