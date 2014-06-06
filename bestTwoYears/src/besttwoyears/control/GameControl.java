@@ -20,7 +20,8 @@ class GameControl {
 
         // save as current game
         BestTwoYears.setCurrentGame(game);
-
+        
+        // Create list with array or Call function 
         GameControl.createBagItemsList();   // create bagItems list
         GameControl.createPeopleList();     // create people list
         GameControl.createCellPhone();      // create the cellphone
@@ -69,10 +70,13 @@ class GameControl {
     public static void createPeopleList() {
         String[] people = new String[Constants.NUMBER_OF_PEOPLE];
 
-        people[Constants.MISSIONPRESIDENT] = "Mission President";
+        people[Constants.MISSIONPRESIDENT] = "Mission President"; 
         people[Constants.BISHOP] = "Bishop";
-        people[Constants.JACKSON] = "Mr. Jackson";
         people[Constants.SMITH] = "Brother Smith";
+        
+        people[Constants.JACKSON] = "Mr. Jackson";
+        people[Constants.MRSJACKSON] = "Mrs. Jackson";
+        
         people[Constants.SAM] = "Sam";
         people[Constants.JACOB] = "Jacob";
         people[Constants.ALEJANDRA] = "Alejandra";
@@ -96,8 +100,16 @@ class GameControl {
     }
 
     public static void createMap() {
-        // Two dimentional array thing
-        System.out.println("\n Calling the createMap stub function");
+        // Two dimentional array thing, Plan: 5x5=25 scene
+        // System.out.println("\n Calling the createMap stub function");
+        
+        location[][] map = new Location[Constants.MAP_ROW_COUNT][Constants.MAP_COLUMN_COUNT];
+        Location location = new Location();
+        
+        for (int row = 0; row < Constants.MAP_ROW_COUNT; row++) {
+            for (int column = 0; column < Constants.MAP_COLUMN_COUNT; column++) {
+            }
+        }
     }
 
 }
