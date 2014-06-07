@@ -1,5 +1,9 @@
 /*
- *
+ * GameControl.java: 
+ *  startNewGame, startSavedGame
+ *  createBagItemsList, createPeopleList
+ *  createCellPhone/createPlanner
+ * 
  */
 package besttwoyears.control;
 
@@ -40,27 +44,27 @@ class GameControl {
         // String[] bagItems = new String[Constants.NUMBER_OF_BAGITEMS];    Keep this?
 
         // create array list of inventory items
-        BagItems[] bagItems = new BagItems[Constants.NUMBER_OF_BAGITEMS];
+        BagItem[] bagItems = new BagItem[Constants.NUMBER_OF_BAGITEMS];
 
-        BagItems scripture = new BagItems();
+        BagItem scripture = new BagItem();
         scripture.setDescription("Scripture");
         scripture.setQuantityInStock(0);
         scripture.setRequiredAmount(0);
         bagItems[Constants.SCRIPTURE] = scripture;
 
-        BagItems bookofMormon = new BagItems();
+        BagItem bookofMormon = new BagItem();
         bookofMormon.setDescription("Book of Mormon");
         bookofMormon.setQuantityInStock(0);
         bookofMormon.setRequiredAmount(0);
         bagItems[Constants.BOOKOFMORMON] = bookofMormon;
 
-        BagItems passAlongCard = new BagItems();
+        BagItem passAlongCard = new BagItem();
         passAlongCard.setDescription("Pass-Along Card");
         passAlongCard.setQuantityInStock(0);
         passAlongCard.setRequiredAmount(0);
         bagItems[Constants.PASSALONGCARD] = passAlongCard;
 
-        BagItems familyPics = new BagItems();
+        BagItem familyPics = new BagItem();
         familyPics.setDescription("Family Picture");
         familyPics.setQuantityInStock(0);
         familyPics.setRequiredAmount(0);
@@ -125,7 +129,7 @@ class GameControl {
     private static void assginScenes(Map map, Scene[] scenes) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    }
+
     
     
 

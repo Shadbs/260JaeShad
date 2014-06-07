@@ -11,10 +11,10 @@ public class Constants {
     
     // BagItemsList
     public final static int NUMBER_OF_BAGITEMS = 5;   // if only 3 in GameControl function, Should we have only 3?
-    public final static int SCRIPTURE = 3;
+    public final static int SCRIPTURE = 0;
     public final static int PASSALONGCARD = 1;
     public final static int BOOKOFMORMON = 2;
-    public final static int FAMILYPICS = 1;
+    public final static int FAMILYPICS = 3;
     
     // PeopleList - Mission Related
     public final static int NUMBER_OF_PEOPLE = 8;

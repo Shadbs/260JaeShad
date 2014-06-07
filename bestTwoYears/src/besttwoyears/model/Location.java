@@ -1,14 +1,13 @@
 /*
  * Location.java for createMap() in GameControl 
- * to assign Player & People in the Location.
+ * to assign Player & People in the Location. 
  */
 
 package besttwoyears.model;
 
 import java.io.Serializable;
 
-/**
- *
+/*
  * @author Jae Lee
  */
 public class Location implements Serializable {
