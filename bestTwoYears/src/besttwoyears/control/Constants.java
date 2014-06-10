@@ -51,4 +51,5 @@ public class Constants {
 //    public final static int = ;
 //    public final static int = ;
 //    public final static int = ;
+    static int NUMBER_OF_SCENES;
 }

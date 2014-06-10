@@ -1,4 +1,5 @@
-/*
+/* Somewhat related with Bagtest.java / Bag.java
+ * editted: BagItems for Array, Week 7
  * BagIetms Class
  */
 

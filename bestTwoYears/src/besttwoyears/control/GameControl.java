@@ -1,9 +1,8 @@
 /*
- * GameControl.java: 
+ *  GameControl.java: 
  *  startNewGame, startSavedGame
  *  createBagItemsList, createPeopleList
  *  createCellPhone/createPlanner
- * 
  */
 package besttwoyears.control;
 
@@ -25,7 +24,7 @@ class GameControl {
         // save as current game
         BestTwoYears.setCurrentGame(game);
         
-        // Create list with array or Call function 
+        // Create list with array(?) or Call function 
         GameControl.createBagItemsList();   // create bagItems list
         GameControl.createPeopleList();     // create people list
         GameControl.createCellPhone();      // create the cellphone
@@ -41,7 +40,6 @@ class GameControl {
     }
 
     public static void createBagItemsList() {
-        // String[] bagItems = new String[Constants.NUMBER_OF_BAGITEMS];    Keep this?
 
         // create array list of inventory items
         BagItem[] bagItems = new BagItem[Constants.NUMBER_OF_BAGITEMS];
@@ -89,7 +87,7 @@ class GameControl {
         GameControl.game.setPeople(people);
     }
 
-    public static void createCellPhone() {  
+    public static void createCellPhone() { // Just Like Ship (on B.Jackson's Code)?
 
         // How to connect GameCall(view)?
         Cellphones cellphone = new Cellphones();
@@ -106,16 +104,31 @@ class GameControl {
     public static void createMap() {
         // Two dimentional array thing, Plan: 5x5=25 scene, Scene/Map/Location Class in Model.
         
-        // 1. Create Initialized map
+        // 1. Create Initialized map, creating 2mentional array, 
         Map map = new Map();
         
         // 2. Create a list of Events
-        Scene[] scenes = createScenes(); // just like createScenes items
+//      Scene[] scenes = createScenes(); // B.Jackson help & just like createBagitemslist
+//      BagItem[] bagItems = new BagItem[Constants.NUMBER_OF_BAGITEMS];
+        Scene[] scenes = new Scene[Constants.NUMBER_OF_SCENES]; 
+        
+        Scene mtcBegin = new Scene();
+        mtcBegin.setDescription("Entering MTC!");
+        mtcBegin.setNoOfPeople(2);
+        People[] people = new People[]  //
+        scenes[Constants.MTCBEGIN] = mtcBegin;
+        
+        Scene training = new Scene();
+        training.setDescription("Training");
+        training.setQuantityInStock(0);
+        training.setRequiredAmount(0);
+        scenes[Constants.Training] = training;
+        
         
         // 3. Assign Events to location to map
         assginScenes(map, scenes);   
 
-//        Here is Old Direction for the Class
+//        Bottom is the Old Direction for the Class
 //        Location[][] map = new Location[Constants.MAP_ROW_COUNT][Constants.MAP_COLUMN_COUNT];
 //        Location location = new Location();        
 //        for (int row = 0; row < Constants.MAP_ROW_COUNT; row++) {
