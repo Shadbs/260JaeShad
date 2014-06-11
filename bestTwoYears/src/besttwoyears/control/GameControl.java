@@ -7,7 +7,8 @@
 package besttwoyears.control;
 
 import besttwoyears.BestTwoYears;
-import besttwoyears.model.*;
+import besttwoyears.model.People;
+import besttwoyears.model.Scene;
 import besttwoyears.view.*;
 
 /**
@@ -102,45 +103,172 @@ class GameControl {
     }
 
     public static void createMap() {
-        // Two dimentional array thing, Plan: 5x5=25 scene, Scene/Map/Location Class in Model.
-        
+
+//        Bottom is the Old Direction for the Class
+        Location[][] map = new Location[Constants.MAP_ROW_COUNT][Constants.MAP_COLUMN_COUNT];
+        Location location = new Location();        
+        for (int row = 0; row < Constants.MAP_ROW_COUNT; row++) {
+            for (int column = 0; column < Constants.MAP_COLUMN_COUNT; column++) {}
+            }
+        }
+
+    private static Scene[] createScenes() {
         // 1. Create Initialized map, creating 2mentional array, 
         Map map = new Map();
         
         // 2. Create a list of Events
-//      Scene[] scenes = createScenes(); // B.Jackson help & just like createBagitemslist
-//      BagItem[] bagItems = new BagItem[Constants.NUMBER_OF_BAGITEMS];
+            // Scene[] scenes = createScenes(); 
+            // B.Jackson help & just like createBagitemslist
+            // BagItem[] bagItems = new BagItem[Constants.NUMBER_OF_BAGITEMS];
         Scene[] scenes = new Scene[Constants.NUMBER_OF_SCENES]; 
         
         Scene mtcBegin = new Scene();
         mtcBegin.setDescription("Entering MTC!");
-        mtcBegin.setNoOfPeople(2);
-        People[] people = new People[]  //
+        mtcBegin.setNoOfPeople(1);
+        People[] teacher = new People[Constants.MTCTEACHER];  // Teacher
         scenes[Constants.MTCBEGIN] = mtcBegin;
         
-        Scene training = new Scene();
-        training.setDescription("Training");
-        training.setQuantityInStock(0);
-        training.setRequiredAmount(0);
-        scenes[Constants.Training] = training;
+        Scene apTraining = new Scene();
+        apTraining.setDescription("In the Field, Tranined by AP");
+        apTraining.setNoOfPeople(1);
+        People[] people = new People[];  // AP
+        scenes[Constants.AP_TRAINING] = apTraining;
         
+        Scene samSTContacting = new Scene();
+        samSTContacting.setDescription("Street Contact: SAM");
+        samSTContacting.setNoOfPeople(1);
+        People[] people = new People[];  // Sam
+        scenes[Constants.SAMSTCONTACTING] = samSTContacting;
         
-        // 3. Assign Events to location to map
-        assginScenes(map, scenes);   
+        Scene JacobTracting = new Scene();
+        JacobTracting.setDescription("Tracting: Jacob");
+        JacobTracting.setNoOfPeople(1);
+        People[] people = new People[];  // Jacob
+        scenes[Constants.JACOBTRACTING] = JacobTracting;
+        
+        Scene pday1 = new Scene();
+        pday1.setDescription("1st P-Day");
+        pday1.setNoOfPeople(0);
+        scenes[Constants.PDAY1] = pday1;
+        
+        Scene mlMeal = new Scene();
+        mlMeal.setDescription("Member Meal: Mission Leader");
+        mlMeal.setNoOfPeople(1);
+        People[] people = new People[];  // Mission Leader
+        scenes[Constants.MLMEAL] = mlMeal;
+        
+        Scene malboronMobsAttack = new Scene();
+        malboroMobsAttack.setDescription("Mob Attack: Malboron");
+        malboroMobsAttack.setNoOfPeople(1);
+        People[] people = new People[];  // Malboron
+        scenes[Constants.MALBORONMOBSATTACK] = malboroMobsAttack;        
 
-//        Bottom is the Old Direction for the Class
-//        Location[][] map = new Location[Constants.MAP_ROW_COUNT][Constants.MAP_COLUMN_COUNT];
-//        Location location = new Location();        
-//        for (int row = 0; row < Constants.MAP_ROW_COUNT; row++) {
-//            for (int column = 0; column < Constants.MAP_COLUMN_COUNT; column++) {}
-        }
-
-    private static Scene[] createScenes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Scene samTeaching = new Scene();
+        samTeaching.setDescription("Teaching: Sam with Bro.Smith");
+        samTeaching.setNoOfPeople(2);
+        People[] people = new People[];  // Sam
+        People[] people = new People[];  // Brother Smith
+        scenes[Constants.SAMTEACHING] = samTeaching;   
+        
+        Scene aleTeaching = new Scene();
+        aleTeaching.setDescription("Teaching: Alejandra");
+        aleTeaching.setNoOfPeople(1);
+        People[] people = new People[];  // Sam
+        scenes[Constants.ALETEACHING] = aleTeaching;  
+        
+        Scene service1 = new Scene();
+        service1.setDescription("1st Service Project");
+        service1.setNoOfPeople(0);
+        scenes[Constants.SERVICE1] = service1;
+        
+        Scene minSTContacting = new Scene();
+        minSTContacting.setDescription("Street Contact: Min");
+        minSTContacting.setNoOfPeople(1);
+        People[] people = new People[];  // Min
+        scenes[Constants.MINSTCONTACTING] = minSTContacting;        
+        
+        Scene baptism1 = new Scene();
+        baptism1.setDescription("1st Baptism");
+        baptism1.setNoOfPeople(1);
+        People[] people = new People[];  // point fulfilled investigator
+        scenes[Constants.BAPTISM1] = baptism1;          
+        
+        Scene callingZL = new Scene();
+        callingZL.setDescription("Zone Leader Called by Mission President");
+        callingZL.setNoOfPeople(1);
+        People[] people = new People[];  // Mission President
+        scenes[Constants.CALLINGZL] = callingZL;
+        
+        Scene bishopMeal = new Scene();
+        bishopMeal.setDescription("Member Meal: Bishop");
+        bishopMeal.setNoOfPeople(1);
+        People[] people = new People[];  // bishop
+        scenes[Constants.BISHOPMEAL] = bishopMeal;
+        
+        Scene pday2 = new Scene();
+        pday2.setDescription("2nd P-Day");
+        pday2.setNoOfPeople(0);
+        scenes[Constants.PDAY2] = pday2;
+        
+        Scene transfer = new Scene();
+        transfer.setDescription("Transffered by Mission President");
+        transfer.setNoOfPeople(1);
+        People[] people = new People[];  // Mission President
+        scenes[Constants.TRANSFER] = transfer;
+        
+        Scene koronaMobsAttack = new Scene();
+        koronaMobsAttack.setDescription("Mob Attack: Korona");
+        koronaMobsAttack.setNoOfPeople(1);
+        People[] people = new People[];  // korona
+        scenes[Constants.KORONAMOBSATTACK] = koronaMobsAttack;  
+        
+        Scene proselytingJacksons = new Scene();
+        proselytingJacksons.setDescription("Proselyting: The Jackson's");
+        proselytingJacksons.setNoOfPeople(2);
+        People[] people = new People[];  // Mr. Jackson
+        People[] people = new People[];  // Mrs. Jackson
+        scenes[Constants.PROSELYTINGJACKSONS] = proselytingJacksons; 
+        
+        Scene service2 = new Scene();
+        service2.setDescription("2nd Service Project");
+        service2.setNoOfPeople(0);
+        scenes[Constants.SERVICE2] = service2;
+        
+        Scene cocaMobsAttack = new Scene();
+        cocaMobsAttack.setDescription("Mob Attack: Coca-Colly");
+        cocaMobsAttack.setNoOfPeople(1);
+        People[] people = new People[];  // Coca Cola
+        scenes[Constants.COCAMOBSATTACK] = cocaMobsAttack; 
+        
+        Scene kazTeaching = new Scene();
+        kazTeaching.setDescription("Teaching: Kazyama");
+        kazTeaching.setNoOfPeople(1);
+        People[] people = new People[];  // Kaz
+        scenes[Constants.KAZTEACHING] = kazTeaching;  
+        
+        Scene katieSTContacting = new Scene();
+        katieSTContacting.setDescription("Street Contact: Katie");
+        katieSTContacting.setNoOfPeople(1);
+        People[] people = new People[];  // Katie
+        scenes[Constants.KATIESTCONTACTING] = katieSTContacting;
+        
+        Scene baptism2 = new Scene();
+        baptism2.setDescription("2nd Baptism");
+        baptism2.setNoOfPeople(1);
+        People[] people = new People[];  // Point fulfilled investigator
+        scenes[Constants.BAPTISM2] = baptism2;
+        
+        Scene welcomeHome = new Scene();
+        welcomeHome.setDescription("Welcome Home & Return to Honor!");
+        welcomeHome.setNoOfPeople(0);
+        scenes[Constants.WELCOMHOME] = welcomeHome;
+        
+        return scenes;
     }
 
     private static void assginScenes(Map map, Scene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//        3. Assign Events to location to map
+//        assginScenes(map, scenes);   
     }
 
     

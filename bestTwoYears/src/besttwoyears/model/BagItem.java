@@ -17,6 +17,7 @@ public class BagItem implements Serializable{
     private String description;
     private String name;
     private int quantityInStock;
+    private int RequiredAmount;
 
     public BagItem() {
     }
@@ -78,6 +79,10 @@ public class BagItem implements Serializable{
             return false;
         }
         return true;
+    }
+
+    public void setRequiredAmount(int RequiredAmount) {
+        this.RequiredAmount = RequiredAmount;
     }
     
 
