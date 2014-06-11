@@ -12,7 +12,7 @@ import besttwoyears.model.Companion;
 import besttwoyears.model.Game;
 import besttwoyears.model.Investigator;
 import besttwoyears.model.Leader;
-import besttwoyears.model.People;
+import besttwoyears.model.Person;
 import besttwoyears.model.Player;
 import besttwoyears.model.mission;  
 import besttwoyears.view.HelpMenuView;

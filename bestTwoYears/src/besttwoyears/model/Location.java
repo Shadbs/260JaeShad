@@ -14,7 +14,7 @@ public class Location implements Serializable {
     int row;
     int column;
     Scene scene;
-    People[] people;
+    Person[] people;
 
     public Location() {
     }
@@ -43,11 +43,11 @@ public class Location implements Serializable {
         this.scene = scene;
     }
 
-    public People[] getPeople() {
+    public Person[] getPeople() {
         return people;
     }
 
-    public void setPeople(People[] people) {
+    public void setPeople(Person[] people) {
         this.people = people;
     }
     

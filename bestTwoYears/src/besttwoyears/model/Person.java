@@ -8,12 +8,14 @@ package besttwoyears.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class People implements Serializable{
+public class Person implements Serializable{
      
     private String name;
     private String title;
 
-    public People() {
+    public Person(String title, String name) {
+        this.name = name;
+        this.title = title;
     }
 
     public String getName() {
@@ -53,7 +55,7 @@ public class People implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final People other = (People) obj;
+        final Person other = (Person) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }

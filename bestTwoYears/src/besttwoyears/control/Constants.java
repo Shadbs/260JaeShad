@@ -17,7 +17,7 @@ public class Constants {
     public final static int FAMILYPICS = 3;
     
     // PeopleList - Mission Related
-    public final static int NUMBER_OF_PEOPLE = 23;
+    public final static int NUMBER_OF_PEOPLE = 2;
     public final static int MISSIONPRESIDENT = 5;
     public final static int MTCTEACHER= 4;
     public final static int AP= 3;
@@ -27,20 +27,21 @@ public class Constants {
     public final static int SMITH = 2; // Brother Smith
         // People - Investigators
     public final static int MRJACKSON = 1;
-    public final static int MRSJACKSON= 1;
-    public final static int SAM = 1;
-    public final static int JACOB = 1;
-    public final static int ALEJANDRA = 1;
-    public final static int MIN = 1;
-    public final static int KAZYAMA= 1;
-    public final static int KATIE= 1;
+    public final static int MRSJACKSON= 2;
+    public final static int SAM = 3;
+    public final static int JACOB = 4;
+    public final static int ALEJANDRA = 5;
+    public final static int MIN = 6;
+    public final static int KAZYAMA= 7;
+    public final static int KATIE= 8;
+    public final static int GUYMEN= 9;
     // Mobs
     public final static int MALBORON= 1;
     public final static int KORONA= 2;
     public final static int COCACOLLY= 3;
     // Map Location
     public final static int MAP_ROW_COUNT = 1;
-    public final static int MAP_COLUMN_COUNT = 1;
+    public final static int MAP_COLUMN_COUNT = 2;
     
     // Location / Scene
     static int NUMBER_OF_SCENES;
@@ -48,12 +49,12 @@ public class Constants {
     public final static int SAMSTCONTACTING= 2;
     public final static int AP_TRAINING= 3;
     public final static int JACOBTRACTING= 4;
-    public final static int PDAY1= 4;
-    public final static int PDAY2= 5;
-    public final static int MLMEAL= 6;
-    public final static int MALBORONMOBSATTACK= 7;
-    public final static int SAMTEACHING= 8;
-    public final static int ALETEACHING = 9 ;
+    public final static int PDAY1= 5;
+    public final static int PDAY2= 6;
+    public final static int MLMEAL= 7;
+    public final static int MALBORONMOBSATTACK= 8;
+    public final static int SAMTEACHING= 9;
+    public final static int ALETEACHING = 24 ;
     public final static int SERVICE1= 10;
     public final static int MINSTCONTACTING= 11;
     public final static int BAPTISM1 = 12;
