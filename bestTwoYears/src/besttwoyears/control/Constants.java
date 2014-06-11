@@ -18,7 +18,7 @@ public class Constants {
     
     // PeopleList - Mission Related
     public final static int NUMBER_OF_PEOPLE = 23;
-    public final static int MISSIONPRESIDENT = 5;
+    public final static int MISSIONPRESIDENT = 0;
     public final static int MTCTEACHER= 4;
     public final static int AP= 3;
         // People - Ward Related

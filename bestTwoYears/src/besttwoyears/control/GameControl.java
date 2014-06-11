@@ -7,7 +7,8 @@
 package besttwoyears.control;
 
 import besttwoyears.BestTwoYears;
-import besttwoyears.model.People;
+import besttwoyears.model.*;
+import besttwoyears.model.Person;
 import besttwoyears.model.Scene;
 import besttwoyears.view.*;
 
@@ -71,13 +72,13 @@ class GameControl {
     }
 
     public static void createPeopleList() {
-        String[] people = new String[Constants.NUMBER_OF_PEOPLE];
-
+        Person[] people = new Person[Constants.NUMBER_OF_PEOPLE];
+        
         people[Constants.MISSIONPRESIDENT] = "Mission President"; 
         people[Constants.BISHOP] = "Bishop";
         people[Constants.SMITH] = "Brother Smith";
         
-        people[Constants.JACKSON] = "Mr. Jackson";
+        people[Constants.MRJACKSON] = "Mr. Jackson";
         people[Constants.MRSJACKSON] = "Mrs. Jackson";
         
         people[Constants.SAM] = "Sam";
@@ -112,38 +113,37 @@ class GameControl {
             }
         }
 
-    private static Scene[] createScenes() {
+    private static Scene[] createScenes(Person[] personList) {
         // 1. Create Initialized map, creating 2mentional array, 
         Map map = new Map();
         
         // 2. Create a list of Events
-            // Scene[] scenes = createScenes(); 
-            // B.Jackson help & just like createBagitemslist
-            // BagItem[] bagItems = new BagItem[Constants.NUMBER_OF_BAGITEMS];
         Scene[] scenes = new Scene[Constants.NUMBER_OF_SCENES]; 
         
         Scene mtcBegin = new Scene();
         mtcBegin.setDescription("Entering MTC!");
         mtcBegin.setNoOfPeople(1);
-        People[] teacher = new People[Constants.MTCTEACHER];  // Teacher
+        Person[] scenePeople = new Person[1];  // Teacher
+        scenePeople[0] = personList[Constants.MTCTEACHER];
+        mtcBegin.setScenePeople(scenePeople);
         scenes[Constants.MTCBEGIN] = mtcBegin;
         
         Scene apTraining = new Scene();
         apTraining.setDescription("In the Field, Tranined by AP");
         apTraining.setNoOfPeople(1);
-        People[] people = new People[];  // AP
+        Person[] AP = // AP
         scenes[Constants.AP_TRAINING] = apTraining;
         
         Scene samSTContacting = new Scene();
         samSTContacting.setDescription("Street Contact: SAM");
         samSTContacting.setNoOfPeople(1);
-        People[] people = new People[];  // Sam
+        Person[] people = // Sam
         scenes[Constants.SAMSTCONTACTING] = samSTContacting;
         
         Scene JacobTracting = new Scene();
         JacobTracting.setDescription("Tracting: Jacob");
         JacobTracting.setNoOfPeople(1);
-        People[] people = new People[];  // Jacob
+        Person[] people = // Jacob
         scenes[Constants.JACOBTRACTING] = JacobTracting;
         
         Scene pday1 = new Scene();
@@ -154,26 +154,25 @@ class GameControl {
         Scene mlMeal = new Scene();
         mlMeal.setDescription("Member Meal: Mission Leader");
         mlMeal.setNoOfPeople(1);
-        People[] people = new People[];  // Mission Leader
+        Person[] people = // Mission Leader
         scenes[Constants.MLMEAL] = mlMeal;
         
-        Scene malboronMobsAttack = new Scene();
-        malboroMobsAttack.setDescription("Mob Attack: Malboron");
+        Scene malboronMobsAttack = new Scene();ce        malboroMobsAttack.setDescription("Mob Attack: Malboron");
         malboroMobsAttack.setNoOfPeople(1);
-        People[] people = new People[];  // Malboron
+        Person[] people = // Malboron
         scenes[Constants.MALBORONMOBSATTACK] = malboroMobsAttack;        
 
         Scene samTeaching = new Scene();
         samTeaching.setDescription("Teaching: Sam with Bro.Smith");
         samTeaching.setNoOfPeople(2);
-        People[] people = new People[];  // Sam
-        People[] people = new People[];  // Brother Smith
+        Person[] people = // Sam
+        Person[] people = // Brother Smith
         scenes[Constants.SAMTEACHING] = samTeaching;   
         
         Scene aleTeaching = new Scene();
         aleTeaching.setDescription("Teaching: Alejandra");
         aleTeaching.setNoOfPeople(1);
-        People[] people = new People[];  // Sam
+        Person[] people = // Sam
         scenes[Constants.ALETEACHING] = aleTeaching;  
         
         Scene service1 = new Scene();
@@ -184,25 +183,25 @@ class GameControl {
         Scene minSTContacting = new Scene();
         minSTContacting.setDescription("Street Contact: Min");
         minSTContacting.setNoOfPeople(1);
-        People[] people = new People[];  // Min
+        Person[] people = // Min
         scenes[Constants.MINSTCONTACTING] = minSTContacting;        
         
         Scene baptism1 = new Scene();
         baptism1.setDescription("1st Baptism");
         baptism1.setNoOfPeople(1);
-        People[] people = new People[];  // point fulfilled investigator
+        Person[] people = // point fulfilled investigator
         scenes[Constants.BAPTISM1] = baptism1;          
         
         Scene callingZL = new Scene();
         callingZL.setDescription("Zone Leader Called by Mission President");
         callingZL.setNoOfPeople(1);
-        People[] people = new People[];  // Mission President
+        Person[] people = // Mission President
         scenes[Constants.CALLINGZL] = callingZL;
         
         Scene bishopMeal = new Scene();
         bishopMeal.setDescription("Member Meal: Bishop");
         bishopMeal.setNoOfPeople(1);
-        People[] people = new People[];  // bishop
+        Person[] people = // bishop
         scenes[Constants.BISHOPMEAL] = bishopMeal;
         
         Scene pday2 = new Scene();
@@ -213,20 +212,20 @@ class GameControl {
         Scene transfer = new Scene();
         transfer.setDescription("Transffered by Mission President");
         transfer.setNoOfPeople(1);
-        People[] people = new People[];  // Mission President
+        Person[] people = // Mission President
         scenes[Constants.TRANSFER] = transfer;
         
         Scene koronaMobsAttack = new Scene();
         koronaMobsAttack.setDescription("Mob Attack: Korona");
         koronaMobsAttack.setNoOfPeople(1);
-        People[] people = new People[];  // korona
+        Person[] people = // korona
         scenes[Constants.KORONAMOBSATTACK] = koronaMobsAttack;  
         
         Scene proselytingJacksons = new Scene();
         proselytingJacksons.setDescription("Proselyting: The Jackson's");
         proselytingJacksons.setNoOfPeople(2);
-        People[] people = new People[];  // Mr. Jackson
-        People[] people = new People[];  // Mrs. Jackson
+        Person[] people = // Mr. Jackson
+        Person[] people = // Mrs. Jackson
         scenes[Constants.PROSELYTINGJACKSONS] = proselytingJacksons; 
         
         Scene service2 = new Scene();
@@ -237,25 +236,25 @@ class GameControl {
         Scene cocaMobsAttack = new Scene();
         cocaMobsAttack.setDescription("Mob Attack: Coca-Colly");
         cocaMobsAttack.setNoOfPeople(1);
-        People[] people = new People[];  // Coca Cola
+        Person[] people = // Coca Cola
         scenes[Constants.COCAMOBSATTACK] = cocaMobsAttack; 
         
         Scene kazTeaching = new Scene();
         kazTeaching.setDescription("Teaching: Kazyama");
         kazTeaching.setNoOfPeople(1);
-        People[] people = new People[];  // Kaz
+        Person[] people = // Kaz
         scenes[Constants.KAZTEACHING] = kazTeaching;  
         
         Scene katieSTContacting = new Scene();
         katieSTContacting.setDescription("Street Contact: Katie");
         katieSTContacting.setNoOfPeople(1);
-        People[] people = new People[];  // Katie
+        Person[] people = // Katie
         scenes[Constants.KATIESTCONTACTING] = katieSTContacting;
         
         Scene baptism2 = new Scene();
         baptism2.setDescription("2nd Baptism");
         baptism2.setNoOfPeople(1);
-        People[] people = new People[];  // Point fulfilled investigator
+        Person[] people = // Point fulfilled investigator
         scenes[Constants.BAPTISM2] = baptism2;
         
         Scene welcomeHome = new Scene();

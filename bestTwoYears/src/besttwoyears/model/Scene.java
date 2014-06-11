@@ -12,6 +12,7 @@ import java.io.Serializable;
 public class Scene implements Serializable{
     String description;
     String sceneType;
+    Person[] scenePeople;
 
     public String getDescription() {
         return description;
@@ -27,6 +28,18 @@ public class Scene implements Serializable{
 
     public void setSceneType(String sceneType) {
         this.sceneType = sceneType;
+    }
+
+    public void setNoOfPeople(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Person[] getScenePeople() {
+        return scenePeople;
+    }
+
+    public void setScenePeople(Person[] scenePeople) {
+        this.scenePeople = scenePeople;
     }
     
         

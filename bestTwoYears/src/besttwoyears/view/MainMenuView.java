@@ -65,10 +65,16 @@ public class MainMenuView {
     public void doAction(char playerChoice) {
 
         switch (playerChoice) {
-            case 'G'://Display game menu
-                GameMenu gameMenu = new GameMenu();
+            case 'G'://Start game & display Menu
+                // Start Game
+                GameControl.startNewGame();
+               
+                // display menu
+                GameMenu gameMenu;
+                gameMenu = new GameMenu();
                 gameMenu.displayMenu();
                 break;
+                
             case 'H': //display Help Menu
                 HelpMenuView helpMenu = new HelpMenuView();
                 helpMenu.displayMenu();
