@@ -16,7 +16,6 @@ public class Person implements Serializable{
     public Person() {
     }
 
-    publc 
     public String getName() {
         return name;
     }

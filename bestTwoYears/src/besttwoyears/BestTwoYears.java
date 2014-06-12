@@ -5,7 +5,7 @@
  */
 package besttwoyears;
 
-import besttwoyears.model.BagItem;
+import besttwoyears.*;
 import besttwoyears.model.Call;
 import besttwoyears.model.Cellphones;
 import besttwoyears.model.Companion;
