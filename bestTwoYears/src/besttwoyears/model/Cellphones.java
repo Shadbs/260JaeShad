@@ -17,6 +17,19 @@ public class Cellphones implements Serializable{
     private double call;
     private String text;
     private String contacts;
+    private int number;
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public Cellphones(int number) {
+        this.number = number;
+    }
 
     public Cellphones() {
     }
