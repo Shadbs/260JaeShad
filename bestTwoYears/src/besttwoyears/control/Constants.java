@@ -39,9 +39,10 @@ public class Constants {
     public final static int MALBORON= 1;
     public final static int KORONA= 2;
     public final static int COCACOLLY= 3;
+    
     // Map Location
-    public final static int MAP_ROW_COUNT = 1;
-    public final static int MAP_COLUMN_COUNT = 2;
+    public final static int MAP_ROW_COUNT = 5;
+    public final static int MAP_COLUMN_COUNT = 5;
     
     // Location / Scene
     static int NUMBER_OF_SCENES= 25;
