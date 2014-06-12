@@ -333,6 +333,8 @@ public class GameControl {
     private static void assginScenes(Map map, Scene[] scenes) {
 //        3. Assign Events to location to map
 //        assginScenes(map, scenes);   
+//        Locaiton [][] location = map.getLocation();
+//        location[0][0].setScene(scene[Constants.MTCBEGIN]);
     }
 
 }

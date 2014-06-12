@@ -6,6 +6,7 @@
 package besttwoyears.view;
 
 import besttwoyears.BestTwoYears;
+import besttwoyears.control.*;
 import besttwoyears.control.ProgramControl;
 import java.util.Scanner;
 
