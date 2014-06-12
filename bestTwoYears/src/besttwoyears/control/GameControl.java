@@ -15,7 +15,7 @@ import besttwoyears.view.*;
 /**
  * @author Shad & Jae
  */
-class GameControl {
+public class GameControl {
 
     private static Game game;
 
@@ -198,8 +198,7 @@ class GameControl {
         Scene samTeaching = new Scene();
         samTeaching.setDescription("Teaching: Sam with Bro.Smith");
         samTeaching.setNoOfPeople(2);
-        Person[] sceneSamTeaching = new Person[n]; // 7. Sam & Brothe Smith
-        Person[] sceneSamTeaching = new Person[n];
+        Person[] sceneSamTeaching = new Person[2]; // 7. Sam & Brothe Smith
         sceneSamTeaching[7] = personList[Constants.SAM];//Sam
         sceneSamTeaching[7] = personList[Constants.SMITH];//B.Smith
         samTeaching.setScenePeople(sceneSamTeaching);
@@ -208,7 +207,7 @@ class GameControl {
         Scene aleTeaching = new Scene();
         aleTeaching.setDescription("Teaching: Alejandra");
         aleTeaching.setNoOfPeople(1);
-        Person[] sceneAleTeaching = new Person[n]; // 8. Ale
+        Person[] sceneAleTeaching = new Person[1]; // 8. Ale
         sceneAleTeaching[8] = personList[Constants.ALEJANDRA];
         aleTeaching.setScenePeople(sceneAleTeaching);
         scenes[Constants.ALE_TEACHING] = aleTeaching;
@@ -222,7 +221,7 @@ class GameControl {
         Scene minSTContacting = new Scene();
         minSTContacting.setDescription("Street Contact: Min");
         minSTContacting.setNoOfPeople(1); // 10. Min
-        Person[] sceneMinSTContacting = new Person[n];
+        Person[] sceneMinSTContacting = new Person[1];
         sceneMinSTContacting[10] = personList[Constants.MIN];
         minSTContacting.setScenePeople(sceneMinSTContacting);
         scenes[Constants.MIN_STCONTACTING] = minSTContacting;   
@@ -232,15 +231,15 @@ class GameControl {
         Scene baptism1 = new Scene();
         baptism1.setDescription("1st Baptism");
         baptism1.setNoOfPeople(1); // could be multiple?
-        Person[] sceneBaptism1 = new Person[n]; // 11. Baptism1
-        sceneBaptism1[11] = personList[Constants.PersonName]; // who else?
+        Person[] sceneBaptism1 = new Person[1]; // 11. Baptism1
+        sceneBaptism1[11] = personList[Constants.MIN]; // who else? Just say Min
         baptism1.setScenePeople(sceneBaptism1);
         scenes[Constants.BAPTISM1] = baptism1;
        
         Scene callingZL = new Scene();
         callingZL.setDescription("Zone Leader Calling");
         callingZL.setNoOfPeople(1); // 12. ZL calling
-        Person[] sceneCallingZL = new Person[n];
+        Person[] sceneCallingZL = new Person[1];
         sceneCallingZL[12] = personList[Constants.MISSIONPRESIDENT];
         callingZL.setScenePeople(sceneCallingZL);
         scenes[Constants.ZL_CALLING] = callingZL;
@@ -248,7 +247,7 @@ class GameControl {
         Scene bishopMeal = new Scene();
         bishopMeal.setDescription("Member Meal: Bishop");
         bishopMeal.setNoOfPeople(1); // 13. Bishop Meal
-        Person[] sceneBishopMeal = new Person[n];
+        Person[] sceneBishopMeal = new Person[1];
         sceneBishopMeal[13] = personList[Constants.BISHOP];
         bishopMeal.setScenePeople(sceneBishopMeal);
         scenes[Constants.BISHOP_MEAL] = bishopMeal;
@@ -262,7 +261,7 @@ class GameControl {
         Scene transfer = new Scene();
         transfer.setDescription("Transffered by Mission President");
         transfer.setNoOfPeople(1);  // 15. Transfer: Just Print out Message
-        Person[] sceneTransfer = new Person[n];
+        Person[] sceneTransfer = new Person[1];
         sceneTransfer[15] = personList[Constants.MISSIONPRESIDENT];
         transfer.setScenePeople(sceneTransfer);
         scenes[Constants.TRANSFER] = transfer;
@@ -270,7 +269,7 @@ class GameControl {
         Scene koronaMobsAttack = new Scene();
         koronaMobsAttack.setDescription("Mob Attack: Korona");
         koronaMobsAttack.setNoOfPeople(1); // 16. Korona Mobs Attack
-        Person[] sceneKoronaMobsAttack = new Person[n];
+        Person[] sceneKoronaMobsAttack = new Person[1];
         sceneKoronaMobsAttack[16] = personList[Constants.KORONA];
         koronaMobsAttack.setScenePeople(sceneKoronaMobsAttack);
         scenes[Constants.KORONA_MOBSATTACK] = koronaMobsAttack;
@@ -278,7 +277,7 @@ class GameControl {
         Scene proselytingJacksons = new Scene();
         proselytingJacksons.setDescription("Proselyting: The Jackson's");
         proselytingJacksons.setNoOfPeople(2); // 17 Proselyting: Jackson
-        Person[] sceneProselytingJacksons = new Person[n];
+        Person[] sceneProselytingJacksons = new Person[1];
         sceneProselytingJacksons[17] = personList[Constants.MRJACKSON];
         sceneProselytingJacksons[17] = personList[Constants.MRSJACKSON];
         proselytingJacksons.setScenePeople(sceneProselytingJacksons);
@@ -293,7 +292,7 @@ class GameControl {
         Scene cocaMobsAttack = new Scene();
         cocaMobsAttack.setDescription("Mob Attack: Coca-Colly");
         cocaMobsAttack.setNoOfPeople(1); // 20. Coca-Colly Attack
-        Person[] sceneCocaMobsAttack = new Person[n];
+        Person[] sceneCocaMobsAttack = new Person[1];
         sceneCocaMobsAttack[20] = personList[Constants.COCACOLLY];
         cocaMobsAttack.setScenePeople(sceneCocaMobsAttack);
         scenes[Constants.COCA_MOBSATTACK] = cocaMobsAttack;
@@ -301,7 +300,7 @@ class GameControl {
         Scene kazTeaching = new Scene();
         kazTeaching.setDescription("Teaching: Kazyama");
         kazTeaching.setNoOfPeople(1); //21. Kaz
-        Person[] sceneKazTeaching = new Person[n];
+        Person[] sceneKazTeaching = new Person[1];
         sceneKazTeaching[21] = personList[Constants.KAZYAMA];
         kazTeaching.setScenePeople(sceneKazTeaching);
         scenes[Constants.KAZ_TEACHING] = kazTeaching;
@@ -309,7 +308,7 @@ class GameControl {
         Scene katieSTContacting = new Scene();
         katieSTContacting.setDescription("Street Contact: Katie");
         katieSTContacting.setNoOfPeople(1); //22. Katie
-        Person[] sceneKatieSTContacting = new Person[n];
+        Person[] sceneKatieSTContacting = new Person[1];
         sceneKatieSTContacting[22] = personList[Constants.KATIE];
         katieSTContacting.setScenePeople(sceneKatieSTContacting);
         scenes[Constants.KATIE_STCONTACTING] = katieSTContacting;
@@ -319,8 +318,8 @@ class GameControl {
         Scene baptism2 = new Scene();
         baptism2.setDescription("2nd Baptism"); // 23. Baptism 
         baptism2.setNoOfPeople(1); // could be multiple?
-        Person[] sceneBaptism2 = new Person[n]; // 11. Baptism1
-        sceneBaptism2[11] = personList[Constants.PersonName]; // who else?
+        Person[] sceneBaptism2 = new Person[1]; // 11. Baptism1
+        sceneBaptism2[11] = personList[Constants.SAM]; // who else? just say SAM
         baptism2.setScenePeople(sceneBaptism2);
         scenes[Constants.BAPTISM2] = baptism2;
 
@@ -328,7 +327,6 @@ class GameControl {
         welcomeHome.setDescription("Welcome Home & Return to Honor!");
         welcomeHome.setNoOfPeople(0); // 24. The END
         scenes[Constants.WELCOMHOME] = welcomeHome;
-
         return scenes;
     }
 
