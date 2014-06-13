@@ -9,6 +9,7 @@ package besttwoyears.model;
  */
 public class Game {
     double spritualPoint; 
+    Person[] people;
 
     @Override
     public String toString() {
@@ -22,6 +23,16 @@ public class Game {
     public void setSpritualPoint(double spritualPoint) {
         this.spritualPoint = spritualPoint;
     }
+
+    public Person[] getPeople() {
+        return people;
+    }
+
+    public void setPeople(Person[] people) {
+        this.people = people;
+    }
+    
+    
 
     @Override
     public int hashCode() {
@@ -45,12 +56,5 @@ public class Game {
         return true;
     }
 
-    public void setPeople(String[] people) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setPeople(Person[] people) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

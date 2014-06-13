@@ -15,6 +15,7 @@ public class Location implements Serializable {
     int column;
     Scene scene;
     Person[] people;
+    boolean visited;
 
     public Location() {
     }
@@ -51,8 +52,13 @@ public class Location implements Serializable {
         this.people = people;
     }
 
-    public void setVisited(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean isVisited() {
+        return visited;
     }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
     
 }

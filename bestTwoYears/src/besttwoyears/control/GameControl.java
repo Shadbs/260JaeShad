@@ -134,7 +134,7 @@ public class GameControl {
         cellphone[Constants.KAZYAMANUM] = kazyamanum;
 
         Cellphones katienum = new Cellphones(5556824);
-        cellphone[Constants.MRJACKSONNUM] = katienum;
+        cellphone[Constants.KATIENUM] = katienum;
 
         Cellphones guymannum = new Cellphones(5556584);
         cellphone[Constants.GUYMENNUM] = guymannum;

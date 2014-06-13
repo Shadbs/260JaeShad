@@ -75,17 +75,17 @@ public class Constants {
     public final static int KATIE_STCONTACTING= 22;
     public final static int BAPTISM2= 23;
     public final static int WELCOMHOME= 24;
-//    public final static int = ;
-    static int PHONE_NUMBERS;
-    public final static int MRJACKSONNUM = 1;
-    public final static int MRSJACKSONNUM= 2;
-    public final static int SAMNUM = 3;
-    public final static int JACOBNUM = 4;
-    public final static int ALEJANDRANUM = 5;
-    public final static int MINNUM = 6;
-    public final static int KAZYAMANUM= 7;
-    public final static int KATIENUM= 8;
-    public final static int GUYMENNUM= 9;
+//  
+    public final static int PHONE_NUMBERS = 9;
+    public final static int MRJACKSONNUM = 0;
+    public final static int MRSJACKSONNUM= 1;
+    public final static int SAMNUM = 2;
+    public final static int JACOBNUM = 3;
+    public final static int ALEJANDRANUM = 4;
+    public final static int MINNUM = 5;
+    public final static int KAZYAMANUM= 6;
+    public final static int KATIENUM= 7;
+    public final static int GUYMENNUM= 8;
 //    public final static int = ;
 //    public final static int = ;
 //    public final static int = ;

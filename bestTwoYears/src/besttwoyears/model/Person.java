@@ -16,8 +16,9 @@ public class Person implements Serializable{
     public Person() {
     }
 
-    public Person(String president, String hanson) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Person(String title, String name) {
+        this.title = title;
+        this.name = name;
     }
 
     public String getName() {
