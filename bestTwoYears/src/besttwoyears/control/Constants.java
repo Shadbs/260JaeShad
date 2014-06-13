@@ -75,7 +75,7 @@ public class Constants {
     public final static int KATIE_STCONTACTING= 22;
     public final static int BAPTISM2= 23;
     public final static int WELCOMHOME= 24;
-//    public final static int = ;
+//    Phone numbers
     static int PHONE_NUMBERS;
     public final static int MRJACKSONNUM = 1;
     public final static int MRSJACKSONNUM= 2;
@@ -86,7 +86,17 @@ public class Constants {
     public final static int KAZYAMANUM= 7;
     public final static int KATIENUM= 8;
     public final static int GUYMENNUM= 9;
-//    public final static int = ;
+//    Addresses   
+    static int PEOPLE_ADDRESSES;
+    public final static int MRJACKSONADD = 1;
+    public final static int MRSJACKSONADD = 2;
+    public final static int SAMADD = 3;
+    public final static int JACOBADD = 4;
+    public final static int ALEJANDRAADD = 5;
+    public final static int MINADD = 6;
+    public final static int KAZYAMAADD = 7;
+    public final static int KATIEADD = 8;
+    public final static int GUYMENADD = 9;
 //    public final static int = ;
 //    public final static int = ;
 //    public final static int = ;
