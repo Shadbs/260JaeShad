@@ -1,7 +1,6 @@
 /*
  * GameMenuView
  */
-
 package besttwoyears.view;
 
 import besttwoyears.control.GameControl;
@@ -9,6 +8,7 @@ import besttwoyears.BestTwoYears;
 import besttwoyears.control.ProgramControl;
 import besttwoyears.model.*;
 import java.util.Scanner;
+import besttwoyears.model.Bag;
 
 /**
  * @author Jae
@@ -24,9 +24,10 @@ public class GameMenuView {
 //        gameMenu.displayMenu();
 //    }
 //    
+
     private static final String MENU = "\n"
             + "\n ******************************************"
-            + "\n *             Game Menu                  *"                      
+            + "\n *             Game Menu                  *"
             + "\n ******************************************"
             + "\n  B - View Missionary Bag Items            "
             + "\n  P - View Contact People List             "
@@ -49,7 +50,7 @@ public class GameMenuView {
             this.doAction(selection);       // Do action based on selection
         } while (selection != 'E');         // an selection isn't "Exit"
     }
-    
+
     public String getInput() {
         boolean valid = false;
         String playerChoice = null;
@@ -74,55 +75,55 @@ public class GameMenuView {
         }
         return playerChoice;
     }
-    
-        public void doAction(char playerChoice) {
+
+    public void doAction(char playerChoice) {
 
         switch (playerChoice) {
 
             case 'B': // View bag Items[]
                 this.viewBagItems();
                 break;
-                
+
             case 'P': // View Person[]
                 System.out.println("View Person List is in Construction");
                 break;
-                
+
             case 'H': // HelpMenuView
                 HelpMenuView helpMenu = new HelpMenuView();
                 helpMenu.displayMenu();
                 break;
-                
+
             case 'M': // MainMenuView
                 ProgramControl.saveGame(BestTwoYears.getCurrentGame());
                 break;
-                
-             case 'S': // Saving Game
+
+            case 'S': // Saving Game
                 ProgramControl.saveGame(BestTwoYears.getCurrentGame());
                 break;
- 
+
             default:
                 System.out.println("***Choose again, invalid selection***");
                 break;
-            }
+        }
     }
-        
+
     private void viewBagItems() {
         // get sorted list of bagitems
         BagItem[] bagitems = GameControl.getSortedBagItems();
-        
+
         System.out.println("\n List of Bag Items");
         System.out.println("Description:" + "\t"
-                        + "Required: " + "\t"
-                        +"In Stock");
-        
+                + "Required: " + "\t"
+                + "In Stock");
+
         // for each bagitems
-        for (BagItem bagItem : bagitems) {
+        for (BagItem bag : bagitems) {
             // Display the description, required amount
-            System.out.println(bagItem.getDescription() + "\t     " +
-                               bagItem.getRequiredAmount() + "\t     " +
-                               bagItem.getQuantityInStock());
+            Bag.SortBag(bagitems);
+            System.out.println(bag.getDescription() + "\t     "
+                    + bag.getRequiredAmount() + "\t     "
+                    + bag.getQuantityInStock());
         }
     }
-    
+
 }
-    

@@ -26,13 +26,12 @@ public class GameControl {
         BestTwoYears.setCurrentGame(game);
 
         // Create list with arrays in the Call functions
-        
         BagItem[] bagItemList = GameControl.createBagItemsList(); // created bagItems list
         Person[] peopleList = GameControl.createPeopleList(); // created people list
         Cellphones[] cellphoneList = GameControl.createCellPhone(); // created the cellphone
         GameControl.createPlanner();   // created the planner
         GameControl.createMap();       // created & initialized the map
-        
+
         // connect to Game.java
         game.setBagItems(bagItemList);
         game.setPeople(peopleList);
@@ -45,46 +44,42 @@ public class GameControl {
     }
 
     public static void createNewGame(Player player) { // Creating new game and all associate objects. 
-       
+
         // Create a new game
         GameControl.game = new Game();
-        
+
         // set currentGame = new games
         BestTwoYears.setCurrentGame(game);
-        
+
         // set & save player created earlier in game
         GameControl.game.setPlayer(BestTwoYears.getPlayer());
-        
+
         // create list of people and save in game
 //        Person[] people = GameControl.createPeopleList();
 //        GameControl.game.setPeople(people);
-        
         // create list of bagItems and save in game
         BagItem[] bagItems = GameControl.createBagItemsList();
         GameControl.game.setBagItems(bagItems);
-        
+
         // create list of cellphone & save in game    
 //        Cellphones[] cellphones = GameControl.createCellPhone();
 //        GameControl.game.setCellphones(cellphones);
-        
         // create gamePlanner & save in game
 //        GamePlanner gamePlanner = GameControl.createPlanner();
 //        GameControl.game.setGamePlanner(gamePlanner);
-        
         // create map & save in game
 //        Map map = GameControl.createMap();
 //        GameControl.game.setMap(map); // create and initialize map
-        
         // Move player to starting location in the map
 //        MapControl.movePlayerToStartingLocation(0,0);
     }
-    
+
     public static void startSavedGame() {
         System.out.println("\n Calling startSaveGame Stub function");
     }
 
     public static BagItem[] createBagItemsList() {
-        
+
         // create array list of inventory items
         BagItem[] bagItems = new BagItem[Constants.NUMBER_OF_BAGITEMS];
 
@@ -111,16 +106,41 @@ public class GameControl {
         familyPics.setQuantityInStock(0);
         familyPics.setRequiredAmount(0);
         bagItems[Constants.FAMILYPICS] = familyPics;
-        
+
         return bagItems;
     }
-    
+
     public static BagItem[] getSortedBagItems() {
-        System.out.println("\n *** getSortedBagItems stub Function called ***");
-        return null;
+        BagItem[] bagItems = new BagItem[Constants.NUMBER_OF_BAGITEMS];
+
+        BagItem scripture = new BagItem();
+        scripture.setDescription("Scriptures");
+        scripture.setQuantityInStock(1);
+        scripture.setRequiredAmount(1);
+        bagItems[Constants.SCRIPTURE] = scripture;
+
+        BagItem bookofMormon = new BagItem();
+        bookofMormon.setDescription("Book of Mormon");
+        bookofMormon.setQuantityInStock(4);
+        bookofMormon.setRequiredAmount(1);
+        bagItems[Constants.BOOKOFMORMON] = bookofMormon;
+
+        BagItem passAlongCard = new BagItem();
+        passAlongCard.setDescription("Pass-Along Card");
+        passAlongCard.setQuantityInStock(2);
+        passAlongCard.setRequiredAmount(0);
+        bagItems[Constants.PASSALONGCARD] = passAlongCard;
+
+        BagItem familyPics = new BagItem();
+        familyPics.setDescription("Family Picture");
+        familyPics.setQuantityInStock(3);
+        familyPics.setRequiredAmount(0);
+        bagItems[Constants.FAMILYPICS] = familyPics;
+
+        return bagItems;
     }
 
-    public static void createPeopleList() {
+    public static Person[] createPeopleList() {
         Person[] people = new Person[Constants.NUMBER_OF_PEOPLE]; // Create List of Person
 
         Person missionPres = new Person("President", "Hanson", "54 Rhonda Lane"); // Create new person
@@ -154,7 +174,7 @@ public class GameControl {
         people[Constants.MIN] = min;
 
         GameControl.game.setPeople(people);
-        
+
         return people;
     }
 
@@ -189,7 +209,7 @@ public class GameControl {
 
         Cellphones guymannum = new Cellphones(5556584);
         cellphone[Constants.GUYMENNUM] = guymannum;
-        
+
         return cellphone;
     }
 
@@ -200,7 +220,7 @@ public class GameControl {
         System.out.println("\n Calling the GamePlanner function");
 
     }
-    
+
     public static void createMap() {
 
         // Bottom is the Old Direction for the Class
@@ -451,6 +471,5 @@ public class GameControl {
         location[4][4].setScene(scenes[Constants.WELCOMHOME]);
 
     }
-
 
 }
