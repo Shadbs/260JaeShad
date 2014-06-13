@@ -17,18 +17,9 @@ public class Person implements Serializable{
     public Person() { // Defalut Constructor
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Person(String title, String name, String address) { // Overloaded Contructor
+    public Person(String title, String name) { // Overloaded Contructor
         this.title = title;
         this.name = name;
-        this.address = address;
     }
 
     public String getName() {
