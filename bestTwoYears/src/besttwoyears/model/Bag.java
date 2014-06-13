@@ -5,6 +5,7 @@
 
 package besttwoyears.model;
 
+import besttwoyears.BestTwoYears;
 import besttwoyears.control.Constants;
 import java.io.Serializable;
 
@@ -37,6 +38,11 @@ public class Bag implements Serializable{
         }
     
     public static void SortBag (BagItem[] bagItemList) {
+        
+        // Get Inventory List for the current Game
+        BagItem[] bagItems = BestTwoYears.getCurrentGame().getBagItems();
+        
+        // Using Exchange Sort for BagItems List by Alphabetic list
         BagItem tempBag;
         for (int i = 0; i < bagItemList.length-1; i++) {
             for (int j = i + 1; j < bagItemList.length; j++) {

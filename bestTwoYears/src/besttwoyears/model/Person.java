@@ -13,10 +13,10 @@ public class Person implements Serializable{
     private String name;
     private String title;
 
-    public Person() {
+    public Person() { // Defalut Constructor
     }
 
-    public Person(String title, String name) {
+    public Person(String title, String name) { // Overloaded Contructor
         this.title = title;
         this.name = name;
     }

@@ -12,6 +12,10 @@ import java.io.Serializable;
 public class Map implements Serializable{
     Location[][] locations;
 
+    public Map() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public Location[][] getLocation() {
         return locations;
     }
@@ -20,8 +24,8 @@ public class Map implements Serializable{
         this.locations = locations;
     }
     
-    public Map() {
-        this.locations = new Location[5][5];
+    public Map(int rowNum, int colNum) {
+        this.locations = new Location[rowNum][colNum];
         for (int i = 0; i < locations.length; i++) {
             Location[] column = locations[i];
             for (int j = 0; j < column.length; j++) {
