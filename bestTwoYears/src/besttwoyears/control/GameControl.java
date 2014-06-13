@@ -27,16 +27,16 @@ public class GameControl {
 
         // Create list with arrays in the Call functions
         
-        BagItem[] bagItemList = GameControl.createBagItemsList();   // created bagItems list
-        Person[] GameControl.createPeopleList();     // created people list
-        GameControl.createCellPhone();      // created the cellphone
-        GameControl.createPlanner();        // created the planner
-        GameControl.createMap();            // created & initialized the map
+        BagItem[] bagItemList = GameControl.createBagItemsList(); // created bagItems list
+        Person[] peopleList = GameControl.createPeopleList(); // created people list
+        Cellphones[] cellphoneList = GameControl.createCellPhone(); // created the cellphone
+        GameControl.createPlanner();   // created the planner
+        GameControl.createMap();       // created & initialized the map
         
         // connect to Game.java
-        game.setBagItems(bagItems);
-        game.setPeople(people);
-        game.setCellphones(Cellphones);
+        game.setBagItems(bagItemList);
+        game.setPeople(peopleList);
+        game.setCellphones(cellphoneList);
         game.setGamePlanner(null);
         game.setMap(null);
 
@@ -120,7 +120,7 @@ public class GameControl {
         return null;
     }
 
-    public static void createPeopleList() {
+    public static Person[] createPeopleList() {
         Person[] people = new Person[Constants.NUMBER_OF_PEOPLE]; // Create List of Person
 
         Person missionPres = new Person("President", "Hanson"); // Create new person
@@ -154,9 +154,11 @@ public class GameControl {
         people[Constants.MIN] = min;
 
         GameControl.game.setPeople(people);
+        
+        return people;
     }
 
-    public static void createCellPhone() { // Just Like Ship (on B.Jackson's Code)?
+    public static Cellphones[] createCellPhone() { // Just Like Ship (on B.Jackson's Code)?
 
         // How to connect GameCall(view)?
         Cellphones[] cellphone = new Cellphones[Constants.PHONE_NUMBERS];
@@ -187,6 +189,8 @@ public class GameControl {
 
         Cellphones guymannum = new Cellphones(5556584);
         cellphone[Constants.GUYMENNUM] = guymannum;
+        
+        return cellphone;
     }
 
     public static void createPlanner() {
@@ -194,6 +198,7 @@ public class GameControl {
         // How to connect GamePlanner(view)?
         GamePlanner gamePlanner = new GamePlanner();
         System.out.println("\n Calling the GamePlanner function");
+        
     }
     
     public static void createMap() {
@@ -399,7 +404,7 @@ public class GameControl {
         baptism2.setDescription("2nd Baptism"); // 23. Baptism 
         baptism2.setNoOfPeople(1); // could be multiple?
         Person[] sceneBaptism2 = new Person[1]; // 11. Baptism1
-        sceneBaptism2[11] = personList[Constants.SAM]; // who else? just say SAM
+        sceneBaptism2[23] = personList[Constants.SAM]; // who else? just say SAM
         baptism2.setScenePeople(sceneBaptism2);
         scenes[Constants.BAPTISM2] = baptism2;
 
