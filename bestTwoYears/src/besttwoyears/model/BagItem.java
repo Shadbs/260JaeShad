@@ -46,6 +46,10 @@ public class BagItem implements Serializable{
         this.quantityInStock = quantityInStock;
     }
 
+    public int getRequiredAmount() {
+        return RequiredAmount;
+    }
+
     @Override
     public String toString() {
         return "BagItem{" + "description=" + description + ", name=" + name + ", quantityInStock=" + quantityInStock + '}';

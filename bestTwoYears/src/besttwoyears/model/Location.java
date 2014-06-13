@@ -15,6 +15,7 @@ public class Location implements Serializable {
     int column;
     Scene scene;
     Person[] people;
+    boolean visited;
 
     public Location() {
     }
@@ -50,5 +51,14 @@ public class Location implements Serializable {
     public void setPeople(Person[] people) {
         this.people = people;
     }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
     
 }

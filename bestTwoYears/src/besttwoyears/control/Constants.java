@@ -88,15 +88,15 @@ public class Constants {
     public final static int GUYMENNUM= 9;
 //    Addresses   
     static int PEOPLE_ADDRESSES;
-    public final static int MRJACKSONADD = 1;
-    public final static int MRSJACKSONADD = 2;
-    public final static int SAMADD = 3;
-    public final static int JACOBADD = 4;
-    public final static int ALEJANDRAADD = 5;
-    public final static int MINADD = 6;
-    public final static int KAZYAMAADD = 7;
-    public final static int KATIEADD = 8;
-    public final static int GUYMENADD = 9;
+    public final static int MRJACKSONADD = 0;
+    public final static int MRSJACKSONADD = 1;
+    public final static int SAMADD = 2;
+    public final static int JACOBADD = 3;
+    public final static int ALEJANDRAADD = 4;
+    public final static int MINADD = 5;
+    public final static int KAZYAMAADD = 6;
+    public final static int KATIEADD = 7;
+    public final static int GUYMENADD = 8;
 //    public final static int = ;
 //    public final static int = ;
 //    public final static int = ;

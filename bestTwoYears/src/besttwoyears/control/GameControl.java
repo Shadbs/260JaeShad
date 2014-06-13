@@ -8,10 +8,8 @@ package besttwoyears.control;
 
 import besttwoyears.BestTwoYears;
 import besttwoyears.model.*;
-import besttwoyears.model.Person;
-import besttwoyears.model.Scene;
 import besttwoyears.view.*;
-import besttwoyears.model.*;
+import java.io.Serializable;
 
 /**
  * @author Shad & Jae
@@ -27,23 +25,66 @@ public class GameControl {
         // save as current game
         BestTwoYears.setCurrentGame(game);
 
-        // Create list with array(?) or Call function 
-        GameControl.createBagItemsList();   // create bagItems list
-        GameControl.createPeopleList();     // create people list
-        GameControl.createCellPhone();      // create the cellphone
-        GameControl.createPlanner();        // create the planner
-        GameControl.createMap();            // create & initialize the map
+        // Create list with arrays in the Call functions
+        
+        BagItem[] bagItemList = GameControl.createBagItemsList();   // created bagItems list
+        Person[] GameControl.createPeopleList();     // created people list
+        GameControl.createCellPhone();      // created the cellphone
+        GameControl.createPlanner();        // created the planner
+        GameControl.createMap();            // created & initialized the map
+        
+        // connect to Game.java
+        game.setBagItems(bagItems);
+        game.setPeople(people);
+        game.setCellphones(Cellphones);
+        game.setGamePlanner(null);
+        game.setMap(null);
 
         // move player to starting position
-        MapControl.locatePeople();
+        MapControl.locatePlayerToStartingPosition(0, 0); // from (0,0) - MTC
     }
 
+    public static void createNewGame(Player player) { // Creating new game and all associate objects. 
+       
+        // Create a new game
+        GameControl.game = new Game();
+        
+        // set currentGame = new games
+        BestTwoYears.setCurrentGame(game);
+        
+        // set & save player created earlier in game
+        GameControl.game.setPlayer(BestTwoYears.getPlayer());
+        
+        // create list of people and save in game
+//        Person[] people = GameControl.createPeopleList();
+//        GameControl.game.setPeople(people);
+        
+        // create list of bagItems and save in game
+        BagItem[] bagItems = GameControl.createBagItemsList();
+        GameControl.game.setBagItems(bagItems);
+        
+        // create list of cellphone & save in game    
+//        Cellphones[] cellphones = GameControl.createCellPhone();
+//        GameControl.game.setCellphones(cellphones);
+        
+        // create gamePlanner & save in game
+//        GamePlanner gamePlanner = GameControl.createPlanner();
+//        GameControl.game.setGamePlanner(gamePlanner);
+        
+        // create map & save in game
+//        Map map = GameControl.createMap();
+//        GameControl.game.setMap(map); // create and initialize map
+        
+        // Move player to starting location in the map
+//        MapControl.movePlayerToStartingLocation(0,0);
+    }
+    
     public static void startSavedGame() {
         System.out.println("\n Calling startSaveGame Stub function");
     }
 
-    public static void createBagItemsList() {
-
+    public static BagItem[] createBagItemsList() {
+        
         // create array list of inventory items
         BagItem[] bagItems = new BagItem[Constants.NUMBER_OF_BAGITEMS];
 
@@ -70,39 +111,46 @@ public class GameControl {
         familyPics.setQuantityInStock(0);
         familyPics.setRequiredAmount(0);
         bagItems[Constants.FAMILYPICS] = familyPics;
+        
+        return bagItems;
+    }
+    
+    public static BagItem[] getSortedBagItems() {
+        System.out.println("\n *** getSortedBagItems stub Function called ***");
+        return null;
     }
 
     public static void createPeopleList() {
-        Person[] people = new Person[Constants.NUMBER_OF_PEOPLE];
+        Person[] people = new Person[Constants.NUMBER_OF_PEOPLE]; // Create List of Person
 
-        Person missionPres = new Person("President", "Hanson");
-        people[Constants.MISSIONPRESIDENT] = missionPres;
+        Person missionPres = new Person("President", "Hanson", "54 Rhonda Lane"); // Create new person
+        people[Constants.MISSIONPRESIDENT] = missionPres; // Save person in arrary
 
-        Person bishop = new Person("Bishop", "England");
+        Person bishop = new Person("Bishop", "England", "77 Stanely Road");
         people[Constants.BISHOP] = bishop;
 
-        Person maleMember = new Person("Brother", "Pyle");
+        Person maleMember = new Person("Brother", "Pyle", "32 Hawthorn Drive");
         people[Constants.SMITH] = maleMember;
 
-        Person femaleMember = new Person("Sister", "Guymen");
+        Person femaleMember = new Person("Sister", "Guymen", "66 Rose Way");
         people[Constants.GUYMEN] = femaleMember;
 
-        Person mrJackson = new Person("Mr. ", "Jackson");
+        Person mrJackson = new Person("Mr. ", "Jackson", "73 Polar Baear Drive");
         people[Constants.MRJACKSON] = mrJackson;
 
-        Person mrsJackson = new Person("Mrs. ", "Jackson");
+        Person mrsJackson = new Person("Mrs. ", "Jackson", "Dialga Street");
         people[Constants.MRSJACKSON] = mrsJackson;
 
-        Person sam = new Person("Sam", "Howler");
+        Person sam = new Person("Sam", "Howler", "Lilly Circle");
         people[Constants.SAM] = sam;
 
-        Person jacob = new Person("Jacob", "Harman");
+        Person jacob = new Person("Jacob", "Harman", "Rocky Road");
         people[Constants.JACOB] = jacob;
 
-        Person ally = new Person("Ally", "Jacobs");
+        Person ally = new Person("Ally", "Jacobs", "Stone Creek Way");
         people[Constants.ALEJANDRA] = ally;
 
-        Person min = new Person("Min", "Lee");
+        Person min = new Person("Min", "Lee", "Harverd Street");
         people[Constants.MIN] = min;
 
         GameControl.game.setPeople(people);
@@ -135,7 +183,7 @@ public class GameControl {
         cellphone[Constants.KAZYAMANUM] = kazyamanum;
 
         Cellphones katienum = new Cellphones(5556824);
-        cellphone[Constants.MRJACKSONNUM] = katienum;
+        cellphone[Constants.KATIENUM] = katienum;
 
         Cellphones guymannum = new Cellphones(5556584);
         cellphone[Constants.GUYMENNUM] = guymannum;
@@ -145,16 +193,22 @@ public class GameControl {
 
         // How to connect GamePlanner(view)?
         GamePlanner gamePlanner = new GamePlanner();
-        System.out.println("\n Calling the createPlanner stub function");
+        System.out.println("\n Calling the GamePlanner function");
     }
-
+    
     public static void createMap() {
 
-//        Bottom is the Old Direction for the Class
+        // Bottom is the Old Direction for the Class
         Location[][] map = new Location[Constants.MAP_ROW_COUNT][Constants.MAP_COLUMN_COUNT];
         Location location = new Location();
         for (int row = 0; row < Constants.MAP_ROW_COUNT; row++) {
             for (int column = 0; column < Constants.MAP_COLUMN_COUNT; column++) {
+                Location eventLocation = new Location();
+                eventLocation.setColumn(column);
+                eventLocation.setRow(row);
+                eventLocation.setVisited(false);
+
+                map[row][column] = location;
             }
         }
     }
@@ -164,7 +218,6 @@ public class GameControl {
         Map map = new Map();
 
         // 2. Create a list of Events
-        // Scene[] scenes = createScenes(); 
         Scene[] scenes = new Scene[Constants.NUMBER_OF_SCENES];
 
         // 1st col
@@ -304,7 +357,7 @@ public class GameControl {
         Scene proselytingJacksons = new Scene();
         proselytingJacksons.setDescription("Proselyting: The Jackson's");
         proselytingJacksons.setNoOfPeople(2); // 17 Proselyting: Jackson
-        Person[] sceneProselytingJacksons = new Person[1];
+        Person[] sceneProselytingJacksons = new Person[2];
         sceneProselytingJacksons[17] = personList[Constants.MRJACKSON];
         sceneProselytingJacksons[17] = personList[Constants.MRSJACKSON];
         proselytingJacksons.setScenePeople(sceneProselytingJacksons);
@@ -357,11 +410,42 @@ public class GameControl {
         return scenes;
     }
 
-    private static void assginScenes(Map map, Scene[] scenes) {
+    private static void assginScenesToLocation(Map map, Scene[] scenes) {
 //        3. Assign Events to location to map
 //        assginScenes(map, scenes);   
-//        Locaiton [][] location = map.getLocation();
-//        location[0][0].setScene(scene[Constants.MTCBEGIN]);
+        Location[][] location = map.getLocation();
+
+        location[0][0].setScene(scenes[Constants.MTCBEGIN]);
+        location[0][1].setScene(scenes[Constants.AP_TRAINING]);
+        location[0][2].setScene(scenes[Constants.SAM_STCONTACTING]);
+        location[0][3].setScene(scenes[Constants.JACOB_TRACTING]);
+        location[0][4].setScene(scenes[Constants.PDAY1]);
+
+        location[1][0].setScene(scenes[Constants.ML_MEAL]);
+        location[1][1].setScene(scenes[Constants.MALBORON_MOBSATTACK]);
+        location[1][2].setScene(scenes[Constants.SAM_TEACHING]);
+        location[1][3].setScene(scenes[Constants.ALE_TEACHING]);
+        location[1][4].setScene(scenes[Constants.SERVICE1]);
+
+        location[2][0].setScene(scenes[Constants.MIN_STCONTACTING]);
+        location[2][1].setScene(scenes[Constants.BAPTISM1]);
+        location[2][2].setScene(scenes[Constants.ZL_CALLING]);
+        location[2][3].setScene(scenes[Constants.BISHOP_MEAL]);
+        location[2][4].setScene(scenes[Constants.PDAY2]);
+
+        location[3][0].setScene(scenes[Constants.TRANSFER]);
+        location[3][1].setScene(scenes[Constants.KORONA_MOBSATTACK]);
+        location[3][2].setScene(scenes[Constants.JACKSONS_PROSELYTING]);
+        location[3][3].setScene(scenes[Constants.JACKSONS_TEACHING]);
+        location[3][4].setScene(scenes[Constants.SERVICE2]);
+
+        location[4][0].setScene(scenes[Constants.COCA_MOBSATTACK]);
+        location[4][1].setScene(scenes[Constants.KAZ_TEACHING]);
+        location[4][2].setScene(scenes[Constants.KATIE_STCONTACTING]);
+        location[4][3].setScene(scenes[Constants.BAPTISM2]);
+        location[4][4].setScene(scenes[Constants.WELCOMHOME]);
+
     }
+
 
 }

@@ -14,10 +14,13 @@ public class ProgramStartView {
 
     public void banner() {
         //banner: this is displays when run
-        System.out.println("\n Hello future missionary welcome to the Best Two years,  "
-                + "\n here you will have the experience of a lifetime!        "
-                + "\n you have been chosen to represent our Lord Jesus Christ "
-                + "\n and preach His gospel for 2 years of your life          ");
+        System.out.println("\n "                                                
+                + "\n ***************************************************************"
+                + "\n * Hello, Future Missionary! Welcome to the Best Two years!    *"
+                + "\n * Here, you will have the experience of a lifetime!           *"
+                + "\n * You have been chosen to represent our Lord Jesus Christ     *"
+                + "\n * and preach His gospel for 2 years(or 1.5 year) of your life *"
+                + "\n ***************************************************************");
 
     }
 
@@ -51,7 +54,7 @@ public class ProgramStartView {
         Scanner keyboard = new Scanner(System.in);
 
         while (!valid) {
-            System.out.println("Are you a Sister or Elder? E-Elder or S-Sister:");
+            System.out.println("\nAre you a Sister or Elder? E-Elder or S-Sister:    ");
 
             missionTitle = keyboard.nextLine();
             missionTitle = missionTitle.trim();
@@ -76,7 +79,7 @@ public class ProgramStartView {
     }
 
     public void displayWelcome(Player player) {
-        System.out.println("Welcome " + player.getMissionTitle() + " " + player.getLastName());
+        System.out.println("\n Welcome, " + player.getMissionTitle() + " " + player.getLastName());
     }
 
     public ProgramStartView() {

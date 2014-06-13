@@ -12,12 +12,23 @@ public class Person implements Serializable{
      
     private String name;
     private String title;
-
-    public Person() {
+    private String address;
+    
+    public Person() { // Defalut Constructor
     }
 
-    public Person(String president, String hanson) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Person(String title, String name, String address) { // Overloaded Contructor
+        this.title = title;
+        this.name = name;
+        this.address = address;
     }
 
     public String getName() {
