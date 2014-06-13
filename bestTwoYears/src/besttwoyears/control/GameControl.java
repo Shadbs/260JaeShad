@@ -11,7 +11,6 @@ import besttwoyears.model.*;
 import besttwoyears.model.Person;
 import besttwoyears.model.Scene;
 import besttwoyears.view.*;
-import besttwoyears.model.*;
 
 /**
  * @author Shad & Jae
@@ -27,15 +26,15 @@ public class GameControl {
         // save as current game
         BestTwoYears.setCurrentGame(game);
 
-        // Create list with array(?) or Call function 
-        GameControl.createBagItemsList();   // create bagItems list
-        GameControl.createPeopleList();     // create people list
-        GameControl.createCellPhone();      // create the cellphone
-        GameControl.createPlanner();        // create the planner
-        GameControl.createMap();            // create & initialize the map
+        // Create list with arrays in the Call functions
+        GameControl.createBagItemsList();   // created bagItems list
+        GameControl.createPeopleList();     // created people list
+        GameControl.createCellPhone();      // created the cellphone
+        GameControl.createPlanner();        // created the planner
+        GameControl.createMap();            // created & initialized the map
 
         // move player to starting position
-        MapControl.locatePeople();
+        MapControl.locatePlayerToStartingPosition(0,0); // from (0,0) - MTC
     }
 
     public static void startSavedGame() {
@@ -145,16 +144,22 @@ public class GameControl {
 
         // How to connect GamePlanner(view)?
         GamePlanner gamePlanner = new GamePlanner();
-        System.out.println("\n Calling the createPlanner stub function");
+        System.out.println("\n Calling the GamePlanner function");
     }
 
     public static void createMap() {
 
-//        Bottom is the Old Direction for the Class
+        // Bottom is the Old Direction for the Class
         Location[][] map = new Location[Constants.MAP_ROW_COUNT][Constants.MAP_COLUMN_COUNT];
         Location location = new Location();
         for (int row = 0; row < Constants.MAP_ROW_COUNT; row++) {
             for (int column = 0; column < Constants.MAP_COLUMN_COUNT; column++) {
+                Location eventLocation = new Location();
+                eventLocation.setColumn(column);
+                eventLocation.setRow(row);
+                eventLocation.setVisited(false);
+                
+                map[row][column] = location;
             }
         }
     }
@@ -304,7 +309,7 @@ public class GameControl {
         Scene proselytingJacksons = new Scene();
         proselytingJacksons.setDescription("Proselyting: The Jackson's");
         proselytingJacksons.setNoOfPeople(2); // 17 Proselyting: Jackson
-        Person[] sceneProselytingJacksons = new Person[1];
+        Person[] sceneProselytingJacksons = new Person[2];
         sceneProselytingJacksons[17] = personList[Constants.MRJACKSON];
         sceneProselytingJacksons[17] = personList[Constants.MRSJACKSON];
         proselytingJacksons.setScenePeople(sceneProselytingJacksons);
@@ -357,11 +362,41 @@ public class GameControl {
         return scenes;
     }
 
-    private static void assginScenes(Map map, Scene[] scenes) {
+    private static void assginScenesToLocation(Map map, Scene[] scenes) {
 //        3. Assign Events to location to map
 //        assginScenes(map, scenes);   
-//        Locaiton [][] location = map.getLocation();
-//        location[0][0].setScene(scene[Constants.MTCBEGIN]);
+        Location[][] location = map.getLocation();
+
+        location[0][0].setScene(scenes[Constants.MTCBEGIN]);
+        location[0][1].setScene(scenes[Constants.AP_TRAINING]);
+        location[0][2].setScene(scenes[Constants.SAM_STCONTACTING]);
+        location[0][3].setScene(scenes[Constants.JACOB_TRACTING]);
+        location[0][4].setScene(scenes[Constants.PDAY1]);
+
+        location[1][0].setScene(scenes[Constants.ML_MEAL]);
+        location[1][1].setScene(scenes[Constants.MALBORON_MOBSATTACK]);
+        location[1][2].setScene(scenes[Constants.SAM_TEACHING]);
+        location[1][3].setScene(scenes[Constants.ALE_TEACHING]);
+        location[1][4].setScene(scenes[Constants.SERVICE1]);
+
+        location[2][0].setScene(scenes[Constants.MIN_STCONTACTING]);
+        location[2][1].setScene(scenes[Constants.BAPTISM1]);
+        location[2][2].setScene(scenes[Constants.ZL_CALLING]);
+        location[2][3].setScene(scenes[Constants.BISHOP_MEAL]);
+        location[2][4].setScene(scenes[Constants.PDAY2]);
+
+        location[3][0].setScene(scenes[Constants.TRANSFER]);
+        location[3][1].setScene(scenes[Constants.KORONA_MOBSATTACK]);
+        location[3][2].setScene(scenes[Constants.JACKSONS_PROSELYTING]);
+        location[3][3].setScene(scenes[Constants.JACKSONS_TEACHING]);
+        location[3][4].setScene(scenes[Constants.SERVICE2]);
+
+        location[4][0].setScene(scenes[Constants.COCA_MOBSATTACK]);
+        location[4][1].setScene(scenes[Constants.KAZ_TEACHING]);
+        location[4][2].setScene(scenes[Constants.KATIE_STCONTACTING]);
+        location[4][3].setScene(scenes[Constants.BAPTISM2]);
+        location[4][4].setScene(scenes[Constants.WELCOMHOME]);
+
     }
 
 }

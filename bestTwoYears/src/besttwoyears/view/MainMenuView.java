@@ -71,8 +71,7 @@ public class MainMenuView {
                 GameControl.startNewGame();
                
                 // display menu
-                GameMenu gameMenu;
-                gameMenu = new GameMenu();
+                GameMenu gameMenu = new GameMenu();
                 gameMenu.displayMenu();
                 break;
                 

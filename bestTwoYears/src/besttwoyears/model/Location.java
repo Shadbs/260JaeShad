@@ -50,5 +50,9 @@ public class Location implements Serializable {
     public void setPeople(Person[] people) {
         this.people = people;
     }
+
+    public void setVisited(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

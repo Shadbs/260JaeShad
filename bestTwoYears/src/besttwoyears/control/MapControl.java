@@ -1,18 +1,17 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * MapControl
  */
 
 package besttwoyears.control;
-
+        
 /**
  *
  * @author Shad
  */
 class MapControl {
-    public static void locatePeople(){
-        System.out.println("creates the locatePeople");
+    public static void locatePlayerToStartingPosition(int rowNum, int colNum){
+        System.out.println("Go to MTC!");
+        // how to code to bring player back to starting position?
     }
     
 }
