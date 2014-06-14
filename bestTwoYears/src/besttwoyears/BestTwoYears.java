@@ -14,7 +14,7 @@ import besttwoyears.model.Investigator;
 import besttwoyears.model.Leader;
 import besttwoyears.model.Person;
 import besttwoyears.model.Player;
-import besttwoyears.model.Mission;  
+//import besttwoyears.model.Mission;  
 import besttwoyears.view.HelpMenuView;
 import besttwoyears.view.ProgramStartView;
 import besttwoyears.view.MainMenuView;

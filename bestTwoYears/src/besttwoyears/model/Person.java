@@ -12,13 +12,15 @@ public class Person implements Serializable{
      
     private String name;
     private String title;
-
+    private String address;
+    
     public Person() { // Defalut Constructor
     }
 
-    public Person(String title, String name) { // Overloaded Contructor
+    public Person(String title, String name, String address) { // Overloaded Contructor
         this.title = title;
         this.name = name;
+        this.address = address;
     }
 
     public String getName() {

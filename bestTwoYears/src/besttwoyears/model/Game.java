@@ -25,7 +25,7 @@ public class Game implements Serializable{
     private Leader leader;
     private Location location;
     private Scene[] scenes;
-    private Mission mission;
+//    private Mission mission;
     
 
 
