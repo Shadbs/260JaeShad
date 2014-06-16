@@ -108,20 +108,21 @@ public class GameMenuView {
     }
 
     private void viewBagItems() {
-        // get sorted list of bagitems
+        // get sorted list of bagitem
+        
         BagItem[] bagitems = GameControl.getSortedBagItems();
 
         System.out.println("\n List of Bag Items");
         System.out.println("Description:" + "\t"
-                + "Required: " + "\t"
+                + "Required:" + "  "
                 + "In Stock");
 
         // for each bagitems
         for (BagItem bag : bagitems) {
             // Display the description, required amount
-            Bag.SortBag(bagitems);
-            System.out.println(bag.getDescription() + "\t     "
-                    + bag.getRequiredAmount() + "\t     "
+            Bag.sortBag(bagitems);
+            System.out.println(bag.getDescription() + "\t    "
+                    + bag.getRequiredAmount() + "\t      "
                     + bag.getQuantityInStock());
         }
     }

@@ -138,14 +138,14 @@ public class Game implements Serializable{
         this.scenes = scenes;
     }
 
-    public Mission getMission() {
-        return mission;
-    }
-
-    public void setMission(Mission mission) {
-        this.mission = mission;
-    }
-    
+//    public Mission getMission() {
+//        return mission;
+//    }
+//
+//    public void setMission(Mission mission) {
+//        this.mission = mission;
+//    }
+//    
     
     @Override
     public int hashCode() {

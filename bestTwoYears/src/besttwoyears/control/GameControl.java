@@ -111,32 +111,9 @@ public class GameControl {
     }
 
     public static BagItem[] getSortedBagItems() {
-        BagItem[] bagItems = new BagItem[Constants.NUMBER_OF_BAGITEMS];
-
-        BagItem scripture = new BagItem();
-        scripture.setDescription("Scriptures");
-        scripture.setQuantityInStock(1);
-        scripture.setRequiredAmount(1);
-        bagItems[Constants.SCRIPTURE] = scripture;
-
-        BagItem bookofMormon = new BagItem();
-        bookofMormon.setDescription("Book of Mormon");
-        bookofMormon.setQuantityInStock(4);
-        bookofMormon.setRequiredAmount(1);
-        bagItems[Constants.BOOKOFMORMON] = bookofMormon;
-
-        BagItem passAlongCard = new BagItem();
-        passAlongCard.setDescription("Pass-Along Card");
-        passAlongCard.setQuantityInStock(2);
-        passAlongCard.setRequiredAmount(0);
-        bagItems[Constants.PASSALONGCARD] = passAlongCard;
-
-        BagItem familyPics = new BagItem();
-        familyPics.setDescription("Family Picture");
-        familyPics.setQuantityInStock(3);
-        familyPics.setRequiredAmount(0);
-        bagItems[Constants.FAMILYPICS] = familyPics;
-
+        // get the players bag
+        BagItem[] bagItems = GameControl.game.getBagItems(); 
+        Bag.sortBag(bagItems); // sort the list of bagitems
         return bagItems;
     }
 
