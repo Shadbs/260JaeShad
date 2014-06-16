@@ -17,28 +17,28 @@ public class Constants {
     public final static int FAMILYPICS = 3;
     
     // PeopleList - Mission Related
-    public final static int NUMBER_OF_PEOPLE = 23;
+    public final static int NUMBER_OF_PEOPLE = 18;
     public final static int MISSIONPRESIDENT = 0;
-    public final static int MTCTEACHER= 4;
-    public final static int AP= 3;
+    public final static int MTCTEACHER= 12;
+    public final static int AP= 17;
         // People - Ward Related
-    public final static int BISHOP = 3;
-    public final static int MISSIONLEADER= 1;
+    public final static int BISHOP = 1;
+    public final static int MISSIONLEADER= 4;
     public final static int SMITH = 2; // Brother Smith
         // People - Investigators
-    public final static int MRJACKSON = 1;
-    public final static int MRSJACKSON= 2;
-    public final static int SAM = 3;
-    public final static int JACOB = 4;
-    public final static int ALEJANDRA = 5;
-    public final static int MIN = 6;
-    public final static int KAZYAMA= 7;
-    public final static int KATIE= 8;
-    public final static int GUYMEN= 9;
+    public final static int MRJACKSON = 3;
+    public final static int MRSJACKSON= 16;
+    public final static int SAM = 5;
+    public final static int JACOB = 6;
+    public final static int ALEJANDRA = 7;
+    public final static int MIN = 8;
+    public final static int KAZYAMA= 9;
+    public final static int KATIE= 10;
+    public final static int GUYMEN= 11;
     // Mobs
-    public final static int MALBORON= 1;
-    public final static int KORONA= 2;
-    public final static int COCACOLLY= 3;
+    public final static int MALBORON= 13;
+    public final static int KORONA= 14;
+    public final static int COCACOLLY= 15;
     
     // Map Location
     public final static int MAP_ROW_COUNT = 5;

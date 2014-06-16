@@ -88,6 +88,10 @@ public class GameMenuView {
                 System.out.println("View Person List is in Construction");
                 break;
 
+            case 'C':
+                this.viewPersonList();
+                break;
+
             case 'H': // HelpMenuView
                 HelpMenuView helpMenu = new HelpMenuView();
                 helpMenu.displayMenu();
@@ -126,4 +130,14 @@ public class GameMenuView {
         }
     }
 
+    private void viewPersonList() {
+        Person[] individual = GameControl.createPeopleList();
+        
+        for (Person people : individual ){
+        
+            System.out.println(people.getName() + "  " + people.getTitle());
+        }
+        
+   
+    }
 }

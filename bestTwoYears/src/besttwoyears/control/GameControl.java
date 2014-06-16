@@ -55,8 +55,9 @@ public class GameControl {
         GameControl.game.setPlayer(BestTwoYears.getPlayer());
 
         // create list of people and save in game
-//        Person[] people = GameControl.createPeopleList();
-//        GameControl.game.setPeople(people);
+        Person[] people = GameControl.createPeopleList();
+        GameControl.game.setPeople(people);
+
         // create list of bagItems and save in game
         BagItem[] bagItems = GameControl.createBagItemsList();
         GameControl.game.setBagItems(bagItems);
@@ -173,8 +174,32 @@ public class GameControl {
         Person min = new Person("Min", "Lee", "Harverd Street");
         people[Constants.MIN] = min;
 
-        GameControl.game.setPeople(people);
+        Person ap = new Person("President", "Perkins", "65 Colfax way");
+        people[Constants.AP] = ap;
 
+        Person mtcTeach = new Person("Elder", "Thomas", "Room 69");
+        people[Constants.MTCTEACHER] = mtcTeach;
+
+        Person malborn = new Person("Jose", "Malboron", "55 Straw street #7");
+        people[Constants.MALBORON] = malborn;
+
+        Person korana = new Person("Korana", "Madisma", "West 12th Street");
+        people[Constants.KORONA] = korana;
+
+        Person mishLead = new Person("Elder", "Greenwood", "45 South Cranberry");
+        people[Constants.MISSIONLEADER] = mishLead;
+
+        Person kate = new Person("Katie", "Haupt", "64 Garden Street");
+        people[Constants.KATIE] = kate;
+        
+        Person kaz = new Person("Kazyama", "Miyaka", "88 Kim street");
+        people[Constants.KAZYAMA] = kaz;
+        
+        Person coco = new Person("Cocacolly", "Pepsina", "South 8th Street");
+        people[Constants.COCACOLLY] = coco;
+        
+        
+        GameControl.game.setPeople(people);
         return people;
     }
 
