@@ -23,7 +23,7 @@ public class BagTest {
     }
 
     /**
-     * Test of SortBag method, of class Bag.
+     * Test of sortBag method, of class Bag.
      */
     @Test
     public void testSortBag() {
@@ -56,7 +56,7 @@ public class BagTest {
         familyPics.setQuantityInStock(1);
         bagItemList[Constants.FAMILYPICS] = familyPics;
         
-        Bag.SortBag(bagItemList);
+        Bag.sortBag(bagItemList);
         
         for (int i = 0; i < bagItemList.length; i++) {
             BagItem bagItem = bagItemList[i];

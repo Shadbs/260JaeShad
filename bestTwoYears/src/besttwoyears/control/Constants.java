@@ -75,7 +75,8 @@ public class Constants {
     public final static int KATIE_STCONTACTING= 22;
     public final static int BAPTISM2= 23;
     public final static int WELCOMHOME= 24;
-//  
+    
+    // Phone Number(contact number)
     public final static int PHONE_NUMBERS = 9;
     public final static int MRJACKSONNUM = 0;
     public final static int MRSJACKSONNUM= 1;
