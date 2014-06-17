@@ -136,7 +136,8 @@ public class GameMenuView {
         
         for (Person people : individual ){
         
-            System.out.println(people.getName() + "  " + people.getTitle());
+            Persons.sortPeople(individual);
+            System.out.println(people.getTitle() + " " + people.getName());
         }
         
    
