@@ -31,6 +31,7 @@ public class Persons implements Serializable{
         Person tempList;
         for (int i = 0; i < peopleList.length - 1; i++) {
             for (int j = i + 1; j < peopleList.length; j++) {
+                   
                 if (peopleList[i].getTitle().compareTo(peopleList[j].getTitle()) > 0) {
                     tempList = peopleList[i];   //swap
                     peopleList[i] = peopleList[j];

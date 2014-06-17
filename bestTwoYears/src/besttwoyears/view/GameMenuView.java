@@ -133,10 +133,10 @@ public class GameMenuView {
 
     private void viewPersonList() {
         Person[] individual = GameControl.createPeopleList();
-        
+        Persons.sortPeople(individual);
         for (Person people : individual ){
         
-            Persons.sortPeople(individual);
+            
             System.out.println(people.getTitle() + " " + people.getName());
         }
         
