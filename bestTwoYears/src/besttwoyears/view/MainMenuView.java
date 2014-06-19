@@ -27,32 +27,33 @@ public class MainMenuView extends View {
                 + "\n E - Exit Game"
                 + "\n-------------------------------------");
     }
-}
 
-public void doAction(String choice) {
+    @Override
+    public void doAction(String value) {
+        char playerChoice = value.toUpperCase().charAt(0);   // Converstion from String to Char
 
-        switch (choice) {
-            case "G"://Start game & display Menu
+        switch (playerChoice) {
+            case 'G'://Start game & display Menu
                 // Start Game
                 GameControl.startNewGame();
-               
+
                 // display menu
                 GameMenuView gameMenu = new GameMenuView();
-                gameMenu.displayMenu();
+                gameMenu.display();
                 break;
-                
-            case "H": //display Help Menu
+
+            case 'H': //display Help Menu
                 HelpMenuView helpMenu = new HelpMenuView();
-                helpMenu.displayMenu();
+                helpMenu.display();
 
                 break;
-            case "S":// save the current game to disk
+            case 'S':// save the current game to disk
                 ProgramControl.saveGame(BestTwoYears.getCurrentGame());
                 break;
 
             default:
                 System.out.println("***Choose again, invalid selection***");
-                break;            
+                break;
         }
     }
 }

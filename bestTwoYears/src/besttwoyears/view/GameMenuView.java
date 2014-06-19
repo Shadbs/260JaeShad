@@ -1,5 +1,5 @@
 /*
- * GameMenuView
+ * GameMenuView - subclass under View
  */
 package besttwoyears.view;
 
@@ -8,76 +8,33 @@ import besttwoyears.BestTwoYears;
 import besttwoyears.control.ProgramControl;
 import besttwoyears.model.*;
 import java.util.Scanner;
-import besttwoyears.model.Bag;
+import besttwoyears.model.BagItem;
 
 /**
  * @author Jae
  */
-public class GameMenuView {
-//    public void displayMenu() {
-//        
-//        // Create a New game
-//        GameControl.createNewGame(BestTwoYears.getPlayer());
-//        
-//        // Display the game menu
-//        GameMenuView gameMenu = new GameMenuView();
-//        gameMenu.displayMenu();
-//    }
-//    
+public class GameMenuView extends View {
 
-    private static final String MENU = "\n"
-            + "\n ******************************************"
-            + "\n *             Game Menu                  *"
-            + "\n ******************************************"
-            + "\n  B - View Missionary Bag Items            "
-            + "\n  P - View Contact People List             "
-            + "\n  C - View Contact Number List             "
-            + "\n  T - Transfer Missionary to New Location  "
-            + "\n  H - Help Menu                            "
-            + "\n  M - Main Game                            "
-            + "\n  S - Save Game                            "
-            + "\n  Q - Exit Game                            "
-            + "\n ******************************************";
-
-    public void displayMenu() {
-        char selection = ' ';
-        do {
-            System.out.println(MENU);       // Display MainMenu
-
-            String input = this.getInput(); // get user's selection
-            selection = input.charAt(0);    // get first character of string
-
-            this.doAction(selection);       // Do action based on selection
-        } while (selection != 'E');         // an selection isn't "Exit"
+    public GameMenuView() {
+        super("\n"
+                + "\n ******************************************"
+                + "\n *             Game Menu                  *"
+                + "\n ******************************************"
+                + "\n  B - View Missionary Bag Items            "
+                + "\n  P - View Contact People List             "
+                + "\n  C - View Contact Number List             "
+                + "\n  T - Transfer Missionary to New Location  "
+                + "\n  H - Help Menu                            "
+                + "\n  M - Main Game                            "
+                + "\n  S - Save Game                            "
+                + "\n  Q - Exit Game                            "
+                + "\n ******************************************");
     }
 
-    public String getInput() {
-        boolean valid = false;
-        String playerChoice = null;
-        Scanner keyboard = new Scanner(System.in);
-
-        while (!valid) {
-            System.out.println("Enter Choice");
-
-            playerChoice = keyboard.nextLine();
-            playerChoice = playerChoice.trim();
-
-            if (playerChoice.toUpperCase().equals("Q")) {
-                return null;
-            }
-
-            if (playerChoice.length() > 1) {
-                System.out.println("Invalid Choice, Choose again");
-            } else {
-                valid = true;
-            }
-
-        }
-        return playerChoice;
-    }
-
-    public void doAction(char playerChoice) {
-
+    @Override
+    public void doAction(String value) {
+        char playerChoice = value.toUpperCase().charAt(0);        
+        
         switch (playerChoice) {
 
             case 'B': // View bag Items[]
@@ -94,7 +51,7 @@ public class GameMenuView {
 
             case 'H': // HelpMenuView
                 HelpMenuView helpMenu = new HelpMenuView();
-                helpMenu.displayMenu();
+                helpMenu.display();
                 break;
 
             case 'M': // MainMenuView
@@ -113,7 +70,7 @@ public class GameMenuView {
 
     private void viewBagItems() {
         // get sorted list of bagitem
-        
+
         BagItem[] bagitems = GameControl.getSortedBagItems();
 
         System.out.println("\n List of Bag Items");
@@ -124,7 +81,7 @@ public class GameMenuView {
         // for each bagitems
         for (BagItem bag : bagitems) {
             // Display the description, required amount
-            Bag.sortBag(bagitems);
+            BagList.sortBag(bagitems);
             System.out.println(bag.getDescription() + "\t    "
                     + bag.getRequiredAmount() + "\t      "
                     + bag.getQuantityInStock());
@@ -134,12 +91,10 @@ public class GameMenuView {
     private void viewPersonList() {
         Person[] individual = GameControl.createPeopleList();
         Persons.sortPeople(individual);
-        for (Person people : individual ){
-        
-            
+        for (Person people : individual) {
+
             System.out.println(people.getTitle() + " " + people.getName());
         }
-        
-   
+
     }
 }

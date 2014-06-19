@@ -99,7 +99,7 @@ public class ProgramStartView {
         this.displayWelcome(player);                // Print DisplayWelcome (message)
 
         MainMenuView mainMenuView = new MainMenuView(); // Dislay the MainMenu
-        mainMenuView.displayMenu();
+        mainMenuView.display();
     }
 
     public void programStart() {

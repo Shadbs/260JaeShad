@@ -5,7 +5,6 @@
  */
 package besttwoyears;
 
-import besttwoyears.*;
 import besttwoyears.model.Call;
 import besttwoyears.model.Cellphones;
 import besttwoyears.model.Companion;
@@ -53,10 +52,10 @@ public class BestTwoYears {
         ProgramStartView.programStart();  
          
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenu();
+        helpMenu.display();
         
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenu();
+        mainMenu.display();
                 
                 
     }

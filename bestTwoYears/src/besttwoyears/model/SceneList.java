@@ -15,10 +15,6 @@ import java.io.Serializable;
  */
 public class SceneList implements Serializable {
 
-    public static boolean getDescription() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     SceneItem[] scene = new SceneItem[25];
 
     public SceneList() {
