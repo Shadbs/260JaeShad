@@ -13,7 +13,7 @@ import java.io.Serializable;
 public class Location implements Serializable {
     int row;
     int column;
-    Scene scene;
+    SceneItem scene;
     Person[] people;
     boolean visited;
 
@@ -36,11 +36,11 @@ public class Location implements Serializable {
         this.column = column;
     }
 
-    public Scene getScene() {
+    public SceneItem getScene() {
         return scene;
     }
 
-    public void setScene(Scene scene) {
+    public void setScene(SceneItem scene) {
         this.scene = scene;
     }
 

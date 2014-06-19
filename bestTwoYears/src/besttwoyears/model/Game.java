@@ -24,7 +24,7 @@ public class Game implements Serializable{
     private Investigator investigator;
     private Leader leader;
     private Location location;
-    private Scene[] scenes;
+    private SceneItem[] scenes;
 //S
 //    private Mission mission;
     
@@ -131,11 +131,11 @@ public class Game implements Serializable{
         this.location = location;
     }
 
-    public Scene[] getScenes() {
+    public SceneItem[] getScenes() {
         return scenes;
     }
 
-    public void setScenes(Scene[] scenes) {
+    public void setScenes(SceneItem[] scenes) {
         this.scenes = scenes;
     }
 

@@ -45,7 +45,7 @@ public class Constants {
     public final static int MAP_COLUMN_COUNT = 5;
     
     // Location / Scene
-    static int NUMBER_OF_SCENES= 25;
+    public final static int NUMBER_OF_SCENES= 25;
     public final static int MTCBEGIN = 0;
     public final static int AP_TRAINING= 1;
     public final static int SAM_STCONTACTING= 2;

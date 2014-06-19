@@ -1,5 +1,5 @@
 /* BagItems for Array, Week 7
- * Bag Testing
+ * BagList Testing
  */
 
 package besttwoyears.model;
@@ -23,7 +23,7 @@ public class BagTest {
     }
 
     /**
-     * Test of sortBag method, of class Bag.
+     * Test of sortBag method, of class BagList.
      */
     @Test
     public void testSortBag() {
@@ -56,7 +56,7 @@ public class BagTest {
         familyPics.setQuantityInStock(1);
         bagItemList[Constants.FAMILYPICS] = familyPics;
         
-        Bag.sortBag(bagItemList);
+        BagList.sortBag(bagItemList);
         
         for (int i = 0; i < bagItemList.length; i++) {
             BagItem bagItem = bagItemList[i];

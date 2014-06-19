@@ -11,11 +11,11 @@ import java.io.Serializable;
 /**
  * @author Jae Lee
  */
-public class Bag implements Serializable {
+public class BagList implements Serializable {
 
     BagItem[] bag = new BagItem[4];
 
-    public Bag() {
+    public BagList() {
         BagItem[] bagItems = BestTwoYears.getCurrentGame().getBagItems();
         bag = bagItems;
 
