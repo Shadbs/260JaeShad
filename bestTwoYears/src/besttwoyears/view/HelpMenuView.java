@@ -59,7 +59,7 @@ public class HelpMenuView extends View {
                 break;
 
             case 'C':// Making & Receive Phonecall - GamaCall.java
-                GameCall gameCall = new GameCall();
+                GameCallView gameCall = new GameCallView();
                 gameCall.displayMenu();
                 break;
 

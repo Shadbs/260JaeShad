@@ -24,6 +24,7 @@ public class GameMenuView extends View {
                 + "\n  P - View Contact Scene List              "
                 + "\n  C - View Contact Number List             "
                 + "\n  T - Transfer Missionary to New Location  "
+                + "\n  J - Phone Call Menu                      "  //GameCallView Connection
                 + "\n  H - Help Menu                            "
                 + "\n  M - Main Game                            "
                 + "\n  S - Save Game                            "
