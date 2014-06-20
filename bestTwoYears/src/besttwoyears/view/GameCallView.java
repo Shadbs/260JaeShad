@@ -1,5 +1,5 @@
 /*
- * GameCall
+ * GameCallView
  */
 
 package besttwoyears.view;
@@ -8,7 +8,7 @@ package besttwoyears.view;
  * @author Jae Lee
  */
 
-public class GameCall {
+public class GameCallView {
     public void displayMenu() {
         System.out.println("\n"
                 +"\n *******************************************************"
@@ -16,7 +16,7 @@ public class GameCall {
                 +"\n    C - Make a Phone Call                               "
                 +"\n    T - Answering a Text                                "
                 +"\n    N – Look up a contacts Number                       "
-                +"\n    Q – Exit                                            "
+                +"\n    Q – Go Back to Main Menu                            "
                 +"\n *******************************************************");
     }   
 }

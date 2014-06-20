@@ -21,9 +21,10 @@ public class GameMenuView extends View {
                 + "\n *             Game Menu                  *"
                 + "\n ******************************************"
                 + "\n  B - View Missionary Bag Items            "
-                + "\n  P - View Contact Scene List             "
+                + "\n  P - View Contact Scene List              "
                 + "\n  C - View Contact Number List             "
                 + "\n  T - Transfer Missionary to New Location  "
+                + "\n  J - Phone Call Menu                      "  //GameCallView Connection
                 + "\n  H - Help Menu                            "
                 + "\n  M - Main Game                            "
                 + "\n  S - Save Game                            "
