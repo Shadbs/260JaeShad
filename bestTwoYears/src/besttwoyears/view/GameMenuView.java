@@ -21,7 +21,7 @@ public class GameMenuView extends View {
                 + "\n *             Game Menu                  *"
                 + "\n ******************************************"
                 + "\n  B - View Missionary Bag Items            "
-                + "\n  P - View Contact People List             "
+                + "\n  P - View Contact Scene List             "
                 + "\n  C - View Contact Number List             "
                 + "\n  T - Transfer Missionary to New Location  "
                 + "\n  H - Help Menu                            "
@@ -41,7 +41,7 @@ public class GameMenuView extends View {
                 this.viewBagItems();
                 break;
 
-            case 'P': // View Person[]
+            case 'P': // View SceneLust[]
                 System.out.println("View Person List is in Construction");
                 break;
 
