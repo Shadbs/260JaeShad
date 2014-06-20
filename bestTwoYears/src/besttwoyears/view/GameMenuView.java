@@ -22,8 +22,9 @@ public class GameMenuView extends View {
                 + "\n ******************************************"
                 + "\n  B - View Missionary Bag Items            "
                 + "\n  P - View Contact Scene List              "
-                + "\n  C - View Contact Number List             "
+                + "\n  C - View Contact Number List             "//add this to other functions planner and phone
                 + "\n  T - Transfer Missionary to New Location  "
+                + "\n  L - Look at the planner                  "
                 + "\n  J - Phone Call Menu                      "  //GameCallView Connection
                 + "\n  H - Help Menu                            "
                 + "\n  M - Main Game                            "
@@ -49,7 +50,10 @@ public class GameMenuView extends View {
             case 'C':
                 this.viewPersonList();
                 break;
-
+                
+            case 'L': //plannerView
+                   GamePlannerView plannerMenu = new GamePlannerView();
+                    plannerMenu.display();
             case 'H': // HelpMenuView
                 HelpMenuView helpMenu = new HelpMenuView();
                 helpMenu.display();

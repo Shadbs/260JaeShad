@@ -18,10 +18,9 @@ public class GamePlannerView extends View {
                 + "\n --------------------------------------------"
                 + "\n |           Proselyting Option             |"
                 + "\n --------------------------------------------"
-                + "\n  P - General Proselyting                    "
-                + "\n  T - Teach Investigator                     "
-                + "\n  S - Service Projects                       "
-                + "\n  H - Exit to Help Menu                      "
+                + "\n  A - Look up appointments                   "
+                + "\n  D - Add an appointment                     "
+                + "\n  E - Exit to Help Menu                      "
                 + "\n --------------------------------------------");
 
     }
@@ -32,15 +31,17 @@ public class GamePlannerView extends View {
         char playerChoice = value.toUpperCase().charAt(0);
 
         switch (playerChoice) {
-            case 'P': // connection to ProselytingControl
+            case 'A': // connection to ProselytingControl
                 System.out.println("**Look at todays appointments and contact addresses is called**");
                 ; // dummy return values
                 break;
 
-            case 'T': // connection to TeachingControl
+            case 'D': // connection to TeachingControl
                 System.out.println("**Add a appointment is called**");
                 break; // dummy return values
-
+            case 'E'://exit to main game menu
+                GameMenuView gameMenu = new GameMenuView();
+                gameMenu.display();
             default:
                 System.out.println("***Choose Again, Invalid Selection***");
                 break;
