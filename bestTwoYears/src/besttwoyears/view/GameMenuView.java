@@ -22,38 +22,44 @@ public class GameMenuView extends View {
                 + "\n ******************************************"
                 + "\n  B - View Missionary Bag Items            "
                 + "\n  P - View Contact Scene List              "
-                + "\n  C - View Contact Number List             "//add this to other functions planner and phone
+                + "\n  N - View Contact Number List             " //add this to other functions planner and phone
                 + "\n  T - Transfer Missionary to New Location  "
                 + "\n  L - Look at the planner                  "
-                + "\n  J - Phone Call Menu                      "  //GameCallView Connection
+                + "\n  C - Call Menu                            " 
                 + "\n  H - Help Menu                            "
                 + "\n  M - Main Game                            "
                 + "\n  S - Save Game                            "
-                + "\n  Q - Exit Game                            "
+                + "\n  Q - Previous Game                        "
                 + "\n ******************************************");
     }
 
     @Override
     public void doAction(String value) {
-        char playerChoice = value.toUpperCase().charAt(0);        
-        
+        char playerChoice = value.toUpperCase().charAt(0);
+
         switch (playerChoice) {
 
             case 'B': // View bag Items[]
                 this.viewBagItems();
                 break;
 
-            case 'P': // View SceneLust[]
+            case 'P': // View SceneList[]
                 System.out.println("View Person List is in Construction");
                 break;
 
-            case 'C':
+            case 'N': // View Contact Number List
                 this.viewPersonList();
                 break;
-                
+
+            case 'C': // GameCallView
+                GameCallView callMenu = new GameCallView();
+                callMenu.display();
+                break;
+
             case 'L': //plannerView
-                   GamePlannerView plannerMenu = new GamePlannerView();
-                    plannerMenu.display();
+                GamePlannerView plannerMenu = new GamePlannerView();
+                plannerMenu.display();
+                
             case 'H': // HelpMenuView
                 HelpMenuView helpMenu = new HelpMenuView();
                 helpMenu.display();
@@ -93,7 +99,7 @@ public class GameMenuView extends View {
         }
     }
 
-    private void viewPersonList() {
+    public void viewPersonList() {
         Person[] individual = GameControl.createPeopleList();
         Persons.sortPeople(individual);
         for (Person people : individual) {

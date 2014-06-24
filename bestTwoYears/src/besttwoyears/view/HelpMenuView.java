@@ -60,7 +60,7 @@ public class HelpMenuView extends View {
 
             case 'C':// Making & Receive Phonecall - GamaCall.java
                 GameCallView gameCall = new GameCallView();
-                gameCall.displayMenu();
+                gameCall.display();
                 break;
 
             case 'P':// Understanding the Planner - connected to GamePlanner.java
@@ -69,7 +69,7 @@ public class HelpMenuView extends View {
                 break;
 
             case 'T': // Understanding P-Day Task - connected to GamePrepDay.java
-//                prepDay.prepDay(BestTwoYears.getCurrentGame());
+                      // prepDay.prepDay(BestTwoYears.getCurrentGame());
                 GamePrepDay gamePrepDay = new GamePrepDay();
                 gamePrepDay.displayMenu();
                 break;
