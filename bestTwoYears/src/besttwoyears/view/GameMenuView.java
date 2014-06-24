@@ -22,7 +22,7 @@ public class GameMenuView extends View {
                 + "\n ******************************************"
                 + "\n  B - View Missionary Bag Items            "
                 + "\n  P - View Contact Scene List              "
-                + "\n  N - View Contact Number List             " //add this to other functions planner and phone
+                + "\n  N - View Contact Number List             " // add this to other functions planner and phone
                 + "\n  T - Transfer Missionary to New Location  "
                 + "\n  L - Look at the planner                  "
                 + "\n  C - Call Menu                            " 
