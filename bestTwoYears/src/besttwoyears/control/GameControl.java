@@ -218,7 +218,6 @@ public class GameControl {
 
         // How to connect GamePlanner(view)?
         GamePlanner gamePlanner = new GamePlanner();
-        System.out.println("\n Calling the GamePlanner function");
 
     }
 

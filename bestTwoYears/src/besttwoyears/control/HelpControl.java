@@ -12,7 +12,6 @@ import besttwoyears.model.Game;
  */
 public class HelpControl {  // 
     public static void pdayInstruction(Game currentGame) {
-        System.out.println("***'this is Help Control Menu stub function called ***");
     }
     
 }

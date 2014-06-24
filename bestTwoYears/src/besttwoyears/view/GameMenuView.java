@@ -44,7 +44,7 @@ public class GameMenuView extends View {
                 break;
 
             case 'P': // View SceneList[]
-                System.out.println("View Person List is in Construction");
+                System.out.println("View Person List is under Construction");
                 break;
 
             case 'N': // View Contact Number List
