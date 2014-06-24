@@ -29,7 +29,7 @@ public class GameMenuView extends View {
                 + "\n  H - Help Menu                            "
                 + "\n  M - Main Game                            "
                 + "\n  S - Save Game                            "
-                + "\n  Q - Previous Game                        "
+                + "\n  Q - Previous Menu                        "
                 + "\n ******************************************");
     }
 

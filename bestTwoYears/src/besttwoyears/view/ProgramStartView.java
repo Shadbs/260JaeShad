@@ -83,7 +83,7 @@ public class ProgramStartView {
     }
 
     public ProgramStartView() {
-        this.banner();                              //display the banner screen
+        this.banner();                                //display the banner screen
 
         String missionTitle = this.getMissionTitle(); //Asks for the missonary title
         if (missionTitle == null) {
@@ -91,7 +91,7 @@ public class ProgramStartView {
         }
         String playerName = this.getPlayerName();   // prompt the player to input thier name, retrieve the player name. 
         if (playerName == null) {                   // User wants to Quit
-            return;                             // Exit the game
+            return;                                 // Exit the game
         }
 
         Player player = ProgramControl.createPlayer(playerName, missionTitle); // Create player objects & Save it in the programContorl Class
