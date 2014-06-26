@@ -36,8 +36,10 @@ public class GameCallView extends View {
                 GameMenuView viewPersonList = new GameMenuView();
                 viewPersonList.viewPersonList();
                 break;
-                
-            // Q – Go Back to Main Menu
+
+            case 'Q': // Q – Go Back to Main Menu
+                GameMenuView gameMenu = new GameMenuView();
+                gameMenu.display();
             default: // Defalut options 
                 System.out.println("--- Invalid Option, Please Try Again ---");
                 break;

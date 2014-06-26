@@ -14,7 +14,6 @@ import besttwoyears.model.BagItem;
  * @author Jae
  */
 public class GameMenuView extends View {
-    private Person[] individual;
 
     public GameMenuView() {
         super("\n"
@@ -45,6 +44,7 @@ public class GameMenuView extends View {
                 break;
 
             case 'P': // View SceneList[]
+
                 this.viewSceneItems();
                 break;
 
