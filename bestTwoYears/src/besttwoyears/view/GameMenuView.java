@@ -44,7 +44,6 @@ public class GameMenuView extends View {
                 break;
 
             case 'P': // View SceneList[]
-
                 this.viewSceneItems();
                 break;
 
