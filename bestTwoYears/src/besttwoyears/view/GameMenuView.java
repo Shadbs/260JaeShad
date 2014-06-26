@@ -14,6 +14,7 @@ import besttwoyears.model.BagItem;
  * @author Jae
  */
 public class GameMenuView extends View {
+    private Person[] individual;
 
     public GameMenuView() {
         super("\n"
@@ -25,7 +26,7 @@ public class GameMenuView extends View {
                 + "\n  N - View Contact Number List             " // add this to other functions planner and phone
                 + "\n  T - Transfer Missionary to New Location  "
                 + "\n  L - Look at the planner                  "
-                + "\n  C - Call Menu                            " 
+                + "\n  C - Call Menu                            "
                 + "\n  H - Help Menu                            "
                 + "\n  M - Main Game                            "
                 + "\n  S - Save Game                            "
@@ -44,7 +45,7 @@ public class GameMenuView extends View {
                 break;
 
             case 'P': // View SceneList[]
-                System.out.println("View Person List is in Construction");
+                this.viewSceneItems();
                 break;
 
             case 'N': // View Contact Number List
@@ -59,7 +60,7 @@ public class GameMenuView extends View {
             case 'L': //plannerView
                 GamePlannerView plannerMenu = new GamePlannerView();
                 plannerMenu.display();
-                
+
             case 'H': // HelpMenuView
                 HelpMenuView helpMenu = new HelpMenuView();
                 helpMenu.display();
@@ -81,7 +82,6 @@ public class GameMenuView extends View {
 
     private void viewBagItems() {
         // get sorted list of bagitem
-
         BagItem[] bagitems = GameControl.getSortedBagItems();
 
         System.out.println("\n List of Bag Items");
@@ -107,5 +107,13 @@ public class GameMenuView extends View {
             System.out.println(people.getTitle() + " " + people.getName());
         }
 
+    }
+
+    private void viewSceneItems() {
+        SceneItem[] sList = GameControl.createSceneList(BestTwoYears.getCurrentGame().getPeople());
+        SceneList.sortScene(sList);
+        for (SceneItem scene : sList) {
+            System.out.println(scene.getDescription());
+        }
     }
 }

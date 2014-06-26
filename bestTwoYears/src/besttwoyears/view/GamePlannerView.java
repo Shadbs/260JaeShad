@@ -16,7 +16,7 @@ public class GamePlannerView extends View {
     public GamePlannerView() {
         super("\n"
                 + "\n --------------------------------------------"
-                + "\n |           Proselyting Option             |"
+                + "\n |           Planner Option                 |"
                 + "\n --------------------------------------------"
                 + "\n  A - Look up appointments                   "
                 + "\n  D - Add an appointment                     "

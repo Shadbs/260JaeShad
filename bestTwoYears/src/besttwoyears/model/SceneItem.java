@@ -13,6 +13,7 @@ import java.util.Objects;
 public class SceneItem implements Serializable{
     private String description;
     private String sceneType;
+    private int noPeople;
     private Person[] scenePeople;
 
     public String getDescription() {
@@ -32,7 +33,7 @@ public class SceneItem implements Serializable{
     }
 
     public void setNoOfPeople(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.noPeople = i;
     }
 
     public Person[] getScenePeople() {

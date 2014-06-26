@@ -44,7 +44,7 @@ public class SceneList implements Serializable {
         return scene;
     }
 
-    public void setScene(SceneItem[] bag) {
+    public void setScene(SceneItem[] scene) {
         this.scene = scene;
     }
 
