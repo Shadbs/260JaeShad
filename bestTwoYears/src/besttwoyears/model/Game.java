@@ -13,7 +13,7 @@ import java.io.Serializable;
 public class Game implements Serializable{
     private double spritualPoint; 
     private Person[] people;
-    // refer Team Assignment 6 PDF
+    // Refer Team Assignment 6 PDF
     private Player player;
     private Map map;
     private BagItem[] bagItems;
@@ -25,7 +25,6 @@ public class Game implements Serializable{
     private Leader leader;
     private Location location;
     private SceneItem[] scenes;
-//S
 //    private Mission mission;
     
 
