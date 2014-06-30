@@ -22,7 +22,7 @@ public class HelpMenuView extends View {
                 + "\n C - Making & Keep Appoinments(Phone)"
                 + "\n P - Understanding the Planner       "
                 + "\n T - Understanding P-Day Task        "
-                + "\n Q - Return to Game                  "
+                + "\n R - Return to Game                  "
                 + "\n E - Exit to Main Menu               "
                 + "\n-------------------------------------");
     }
@@ -79,7 +79,7 @@ public class HelpMenuView extends View {
                 mainMenu.display();
                 break;
 
-            case 'Q': // Back to the MainMenuView.java
+            case 'R': // Back to the MainMenuView.java
                 GameMenuView gameMenu = new GameMenuView();
                 gameMenu.display();
                 break;

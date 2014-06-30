@@ -16,7 +16,7 @@ public class GameCallView extends View {
                 + "\n C - Make a Phone Call                          "
                 + "\n T - Answering a Text                           "
                 + "\n N – Look up a contacts Number                  " // This function is already built-in feature in Game-Menu
-                + "\n Q – Back to Previous Menu                      "
+                + "\n Q – Back to Game Menu                      "
                 + "\n ***********************************************");
     }
 

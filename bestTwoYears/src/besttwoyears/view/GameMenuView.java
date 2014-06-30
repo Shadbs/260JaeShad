@@ -66,7 +66,8 @@ public class GameMenuView extends View {
                 break;
 
             case 'M': // MainMenuView
-                ProgramControl.saveGame(BestTwoYears.getCurrentGame());
+                MainMenuView mainMenuView = new MainMenuView();
+                mainMenuView.display();
                 break;
 
             case 'S': // Saving Game

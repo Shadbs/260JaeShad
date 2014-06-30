@@ -50,6 +50,9 @@ public class MainMenuView extends View {
             case 'S':// save the current game to disk
                 ProgramControl.saveGame(BestTwoYears.getCurrentGame());
                 break;
+                
+            case 'Q': // Exit out of the Game
+                System.exit(0);
 
             default:
                 System.out.println("***Choose again, invalid selection***");
