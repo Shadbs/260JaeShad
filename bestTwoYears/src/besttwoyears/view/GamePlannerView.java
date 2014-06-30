@@ -20,7 +20,7 @@ public class GamePlannerView extends View {
                 + "\n --------------------------------------------"
                 + "\n  A - Look up appointments                   "
                 + "\n  D - Add an appointment                     "
-                + "\n  E - Exit to Help Menu                      "
+                + "\n  E - Exit to Game Menu                      "
                 + "\n --------------------------------------------");
 
     }
