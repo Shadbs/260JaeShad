@@ -7,7 +7,6 @@ import besttwoyears.control.GameControl;
 import besttwoyears.BestTwoYears;
 import besttwoyears.control.ProgramControl;
 import besttwoyears.model.*;
-import java.util.Scanner;
 import besttwoyears.model.BagItem;
 
 /**
