@@ -9,7 +9,6 @@ package besttwoyears.control;
 import besttwoyears.BestTwoYears;
 import besttwoyears.model.*;
 import besttwoyears.view.*;
-import java.io.Serializable;
 
 /**
  * @author Shad & Jae

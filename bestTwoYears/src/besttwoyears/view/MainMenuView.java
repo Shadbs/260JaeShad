@@ -8,7 +8,6 @@ package besttwoyears.view;
 import besttwoyears.BestTwoYears;
 import besttwoyears.control.*;
 import besttwoyears.control.ProgramControl;
-import java.util.Scanner;
 
 /**
  *
@@ -52,6 +51,10 @@ public class MainMenuView extends View {
                 break;
                 
             case 'Q': // Exit out of the Game
+                System.out.println("\n"
+                        + "\n ***************************************"
+                        + "\n *      Return with Honor, Soon!       *"
+                        + "\n ***************************************");
                 System.exit(0);
 
             default:
