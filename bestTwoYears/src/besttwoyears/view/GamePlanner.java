@@ -31,20 +31,24 @@ public class GamePlanner extends View {
         switch (playerChoice) {
             case 'P': //display Help Menu
                 System.out.println("\n"
-                        + "\n*****************What Is The Planner?*********************************************"
-                        + "\n                                                                                  "
-                        + "\n When selecting the Planner, it will display any future appointments"
-                        + "\n that you will have that day. It will also have the choice between"
-                        + "\n adding a new appointment or deleting one. It is up to the missionary"
-                        + "\n to keep those appointments to keep from facing the consequnses of missing them."
-                        + "\n                                                                                  "
-                        + "\n ****************Using The Planner************************************************"
-                        + "\n"
-                        + "\n After the planner opens it will automatically display the appointements of the day."
-                        + "\n A - Using this command you will be prompted to add the name, address, and phone number of the"
-                        + "\n person you wish to add."
-                        + "\n L - This will bring up a list of people already added to your planner with name, address, and phone number."
-                        + "\n D - Using this command you will be prompted to enter the name of the contact and it will be removed from your contacts.");
+                        + "\n ****************What Is The Planner?*******************************************************"
+                        + "\n                                                                                            "
+                        + "\n When selecting the Planner, it will display any future appointments                        "
+                        + "\n that you will have that day. It will also have the choice between                          "
+                        + "\n adding a new appointment or deleting one. It is up to the missionary                       "
+                        + "\n to keep those appointments to keep from facing the consequnses of missing them.            "
+                        + "\n                                                                                            "
+                        + "\n ****************Using The Planner**********************************************************"
+                        + "\n                                                                                            "
+                        + "\n After the planner opens it will automatically display the appointements of the day.        "
+                        + "\n A - Using this command you will be prompted to add the name, address, and phone number     "
+                        + "\n     of the person you wish to add.                                                         "
+                        + "\n L - This will bring up a list of people already added to your planner with name, address,  "
+                        + "\n     and phone number.                                                                      "
+                        + "\n D - Using this command you will be prompted to enter the name of the contact and it will   "
+                        + "\n     be removed from your contacts.                                                         "
+                        + "\n                                                                                            "
+                        + "\n *******************************************************************************************");
 
                 GamePlanner gamePlanner = new GamePlanner();
                 gamePlanner.display();
@@ -53,7 +57,7 @@ public class GamePlanner extends View {
                 HelpMenuView helpMenu = new HelpMenuView();
                 helpMenu.display();
             default:
-                System.out.println("***Choose again, invalid selection***");
+                System.out.println("***Choose again, Invalid selection***");
                 break;
 
         }

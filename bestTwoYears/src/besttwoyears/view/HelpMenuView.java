@@ -45,16 +45,16 @@ public class HelpMenuView extends View {
                         + "\n Lord will increase your spirit while not doing what you are supposed    "
                         + "\n to do your pride will go up and your spirit will go down. If your pride "
                         + "\n gets to high you may be sent to the mission president to be humbled.    "
-                        + "\n or sent home. Can you survive 2 years?                                  "
+                        + "\n or sent home. Can you survive 2 years (or 18 months)?                                  "
                         + "\n*************************************************************************");
                 break;
 
             case 'M': // How to Move, Display for direction
                 System.out.println("\n"
                         + "\n*****************How to Move***********************"
-                        + "\n Do Your Work and Find the God's chilren, we will  "
+                        + "\n Do Your Work and Find the God's children, we will "
                         + "\n transfer your mission area once investigators     "
-                        + "\n are converted. Go, Find and get them!             "
+                        + "\n are converted. Go, Find and Get them!             "
                         + "\n***************************************************");
                 break;
 
