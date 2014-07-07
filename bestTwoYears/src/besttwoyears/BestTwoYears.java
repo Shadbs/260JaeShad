@@ -56,7 +56,16 @@ public class BestTwoYears {
         
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
-                
+        
+        try {
+        ProgramStartView programStartView = new ProgramStartView();
+        programStartView.banner();
+        }
+        catch (Throwable e){
+            System.out.println("Abnormal error occured, try running program again");
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
                 
     }
 
