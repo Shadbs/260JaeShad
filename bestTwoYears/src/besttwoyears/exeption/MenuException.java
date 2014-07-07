@@ -9,20 +9,20 @@ package besttwoyears.exeption;
  *
  * @author Jae Lee
  */
-public class MenuExeption extends Exception {
+public class MenuException extends Exception {
 
-    public MenuExeption() {
+    public MenuException() {
     }
 
-    public MenuExeption(String errorMessage) {
+    public MenuException(String errorMessage) {
         super(errorMessage);
     }
 
-    public MenuExeption(Throwable errorCause) {
+    public MenuException(Throwable errorCause) {
         super(errorCause);
     }
 
-    public MenuExeption(String errorMessage, Throwable errorCause) {
+    public MenuException(String errorMessage, Throwable errorCause) {
         super(errorMessage, errorCause);
     }
 
