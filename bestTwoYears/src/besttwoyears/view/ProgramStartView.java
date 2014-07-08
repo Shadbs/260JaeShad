@@ -89,6 +89,7 @@ public class ProgramStartView {
         if (missionTitle == null) {
             return;
         }
+        
         String playerName = this.getPlayerName();   // prompt the player to input thier name, retrieve the player name. 
         if (playerName == null) {                   // User wants to Quit
             return;                                 // Exit the game

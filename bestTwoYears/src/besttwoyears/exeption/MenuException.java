@@ -5,8 +5,7 @@
  */
 package besttwoyears.exeption;
 
-/**
- *
+/*
  * @author Jae Lee
  */
 public class MenuException extends Exception {

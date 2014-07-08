@@ -29,6 +29,7 @@ public class MainMenuView extends View {
 
     @Override
     public void doAction(String value) {
+        
         char playerChoice = value.toUpperCase().charAt(0);   // Converstion from String to Char
 
         switch (playerChoice) {
@@ -60,6 +61,7 @@ public class MainMenuView extends View {
             default:
                 System.out.println("***Choose again, invalid selection***");
                 break;
+                
         }
     }
 }

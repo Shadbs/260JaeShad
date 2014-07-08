@@ -14,8 +14,8 @@ import java.io.Serializable;
  * @author Shad
  */
 public class Player implements Serializable{ 
-        private String lastName;
-        private String missionTitle;
+        public String lastName;
+        public String missionTitle;
 
     public Player() {
     }

@@ -20,9 +20,9 @@ public class GameMenuView extends View {
                 + "\n *             Game Menu                  *"
                 + "\n ******************************************"
                 + "\n  B - View Missionary Bag Items            "
-                + "\n  P - View Contact Scene List              "
+                + "\n  P - View Transfer Scene List             "
                 + "\n  N - View Contact Number List             " // add this to other functions planner and phone
-                + "\n  T - Transfer Missionary to New Location  "
+                + "\n  T - Transfer Missionary to other Location"
                 + "\n  L - Look at the planner                  "
                 + "\n  C - Call Menu                            "
                 + "\n  H - Help Menu                            "
@@ -72,6 +72,12 @@ public class GameMenuView extends View {
             case 'S': // Saving Game
                 ProgramControl.saveGame(BestTwoYears.getCurrentGame());
                 break;
+            
+            case 'T': // Move Player to other Location
+                      // MapControl.movePlayerToLocation(int num);
+                MoveLocationMenu moveLocationView = new MoveLocationMenu();
+                moveLocationView.display();
+                break;
 
             default:
                 System.out.println("***Choose again, invalid selection***");
@@ -108,7 +114,7 @@ public class GameMenuView extends View {
 
     }
 
-    private void viewSceneItems() {
+    public static void viewSceneItems() {
         SceneItem[] sList = GameControl.createSceneList(BestTwoYears.getCurrentGame().getPeople());
         SceneList.sortScene(sList);
         for (SceneItem scene : sList) {

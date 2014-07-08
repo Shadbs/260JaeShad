@@ -3,10 +3,6 @@
  */
 package besttwoyears.view;
 
-import besttwoyears.BestTwoYears;
-import besttwoyears.control.*;
-import java.util.Scanner;
-
 /**
  * @author Jae Lee
  */
@@ -85,7 +81,7 @@ public class HelpMenuView extends View {
                 break;
 
             default:
-                System.out.println("***Please Choose Option Again***");
+                System.out.println("-----Please Choose Option Again------");
                 break;
         }
 

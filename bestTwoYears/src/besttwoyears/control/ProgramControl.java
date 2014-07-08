@@ -3,7 +3,6 @@
  */
 package besttwoyears.control;
 
-import besttwoyears.BestTwoYears;
 import besttwoyears.model.Game;
 import besttwoyears.model.Player;
 
