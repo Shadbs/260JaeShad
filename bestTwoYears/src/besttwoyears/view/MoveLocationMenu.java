@@ -60,8 +60,11 @@ public class MoveLocationMenu extends View {
         Scanner keyboard = new Scanner(System.in);
         int sceneNumber = keyboard.nextInt();
         
+        // get the player, game or Constant
+        
+        // game object
         System.out.println("\n"
-//                + Player.missionTitle + " " + Player.lastName
+//                + .missionTitle + " " + Player.lastName
                 + " will be transffered to " + "Scene " + sceneNumber);
 
         return sceneNumber;
