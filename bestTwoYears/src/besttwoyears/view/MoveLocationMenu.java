@@ -65,7 +65,7 @@ public class MoveLocationMenu extends View {
         // game object
         System.out.println("\n"
 //                + .missionTitle + " " + Player.lastName
-                + " will be transffered to " + "Scene " + sceneNumber);
+                + " You will be transffered to " + "Scene " + sceneNumber);
 
         return sceneNumber;
     }

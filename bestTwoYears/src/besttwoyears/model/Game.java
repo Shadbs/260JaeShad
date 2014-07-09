@@ -27,8 +27,6 @@ public class Game implements Serializable{
     private SceneItem[] scenes;
 //    private Mission mission;
     
-
-
     @Override
     public String toString() {
         return "Game{" + "spritualPoint=" + spritualPoint + '}';

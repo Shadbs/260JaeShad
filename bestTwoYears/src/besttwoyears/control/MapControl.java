@@ -18,13 +18,13 @@ class MapControl {
         // how to code to bring player back to starting position?
     }
 
-    public static void movePlayerToLocation(int num)
+    public static void movePlayerToLocation(int row, int col)
             throws MenuException {
 
         Map map = besttwoyears.BestTwoYears.getCurrentGame().getMap();
 
-        if (num < 0 || 25 < num) {
-            throw new MenuException("Invalid Scene Number");
+        if (row < 1 || col < 1 || row > map.getNumOfRows() || row > map.getNumOfCols()) {
+            throw new MenuException("Invalid Scene Number, Please Type Again");
         }
     }
 }

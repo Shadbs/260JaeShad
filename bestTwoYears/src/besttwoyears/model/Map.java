@@ -10,7 +10,17 @@ import java.io.Serializable;
  * @author Jae Lee
  */
 public class Map implements Serializable{
+    int NumOfRows, NumOfCols;
     Location[][] locations;
+
+    public int getNumOfRows() {
+        return NumOfRows;
+    }
+
+    public int getNumOfCols() {
+        return NumOfCols;
+    }
+
 
     public Map() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -37,4 +47,18 @@ public class Map implements Serializable{
         }
     }
     
-}
+//    public Point getLocation() throws ViewException () {
+//        
+//        System.out.println("\n Enter Row and Column number");
+//        String value = this.getInput();
+//        value = value.trim().toUpperCase();
+////        
+////        if (value.equals("Q"))
+////            return null;
+////        
+//        String[] values = value.split(" ");
+        
+        
+    
+    }
+    
