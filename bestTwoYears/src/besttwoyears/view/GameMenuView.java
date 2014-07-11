@@ -3,8 +3,9 @@
  */
 package besttwoyears.view;
 
-import besttwoyears.control.GameControl;
 import besttwoyears.BestTwoYears;
+import besttwoyears.control.GameControl;
+import besttwoyears.control.MapControl;
 import besttwoyears.control.ProgramControl;
 import besttwoyears.model.*;
 import besttwoyears.model.BagItem;
@@ -115,7 +116,7 @@ public class GameMenuView extends View {
     }
 
     public static void viewSceneItems() {
-        SceneItem[] sList = GameControl.createSceneList(BestTwoYears.getCurrentGame().getPeople());
+        SceneItem[] sList = MapControl.createSceneList(BestTwoYears.getCurrentGame().getPeople());
         SceneList.sortScene(sList);
         for (SceneItem scene : sList) {
             System.out.println(scene.getDescription());
