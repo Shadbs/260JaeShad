@@ -46,10 +46,6 @@ public class BestTwoYears {
         //        mainMenu.display();
 
         try {
-        //  ProgramStartView programStartView = new ProgramStartView();
-        //  programStartView.banner();
-            
-            
             
             // create StartProgramView and start the program
             java.awt.EventQueue.invokeLater(

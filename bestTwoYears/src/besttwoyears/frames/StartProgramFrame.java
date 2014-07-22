@@ -204,19 +204,19 @@ public class StartProgramFrame extends javax.swing.JFrame {
         // trim off blank the name
         playerName = playerName.trim();
         // plyer's name is less then 1 charactor - display warning 
-        if (playerName.length() < 2) {
-            JOptionPane.showMesssageDialog(this,
-                    "Player Name is Invalid", JOptionPane.ERROR_MESSAGE);
-                    return;
-        }
-            // display error messge
-//        // return
-
-//        // create new player
-                 Player player = ProgramControl.createPlayer(playerName, this.playerTitle);
+//        if (playerName.length() < 2) {
+//            JOptionPane.showMesssageDialog(this,
+//                    "Player Name is Invalid", JOptionPane.ERROR_MESSAGE);
+//                    return;
+//        }
+//            // display error messge
+////        // return
+//
+////        // create new player
+//                 Player player = ProgramControl.createPlayer(playerName, this.playerTitle);
 //                
-        MainMenuFrame mainMenuFrame = new MainMenuView();
-        mainMenuFrame.getJlPayerName().setText(playerName);
+        MainMenuFrame mainMenuFrame = new MainMenuFrame();
+//        mainMenuFrame.getJlPayerName().setText(playerName);
        mainMenuFrame.setVisible(true);
         
         this.dispose();
