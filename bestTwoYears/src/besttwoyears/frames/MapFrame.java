@@ -43,22 +43,67 @@ public class MapFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setLabel("32 Hawthorn Drive");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setLabel("43 Rocky Road");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setLabel("88 Stone Creek Way");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setLabel("23 Harverd Street");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setLabel("54 Rhonda Lane");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setLabel("76 Lilly Circle");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setLabel("77 Stanley Road");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setLabel("73 Polar Baear Drive");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setLabel("66 Rose Way");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Choose which house you want to go to");
 
@@ -132,6 +177,70 @@ public class MapFrame extends javax.swing.JFrame {
         
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       PaulFrame paulFrame = new PaulFrame();
+//        mainMenuFrame.getJlPayerName().setText(playerName);
+       paulFrame.setVisible(true);
+        
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       AllyFrame allyFrame = new AllyFrame();
+//        mainMenuFrame.getJlPayerName().setText(playerName);
+       allyFrame.setVisible(true);  
+       this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       JacobFrame jacobFrame = new JacobFrame();
+//        mainMenuFrame.getJlPayerName().setText(playerName);
+       jacobFrame.setVisible(true);
+       this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+       MinFrame minFrame = new MinFrame();
+//        mainMenuFrame.getJlPayerName().setText(playerName);
+       minFrame.setVisible(true);  
+       this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+       PresFrame presFrame = new PresFrame();
+//        mainMenuFrame.getJlPayerName().setText(playerName);
+       presFrame.setVisible(true);  
+       this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+       SamFrame samFrame = new SamFrame();
+//        mainMenuFrame.getJlPayerName().setText(playerName);
+       samFrame.setVisible(true);  
+       this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+       BishFrame bishFrame = new BishFrame();
+//        mainMenuFrame.getJlPayerName().setText(playerName);
+       bishFrame.setVisible(true);  
+       this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+       GeoffFrame geoffFrame = new GeoffFrame();
+//        mainMenuFrame.getJlPayerName().setText(playerName);
+       geoffFrame.setVisible(true);
+       this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+       ChristyFrame christyFrame = new ChristyFrame();
+//        mainMenuFrame.getJlPayerName().setText(playerName);
+       christyFrame.setVisible(true);
+       this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments
