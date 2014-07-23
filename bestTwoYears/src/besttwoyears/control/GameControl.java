@@ -138,13 +138,13 @@ public class GameControl {
         Person mrsJackson = new Person("Mrs. ", "Jackson", "Dialga Street");
         people[Constants.MRSJACKSON] = mrsJackson;
 
-        Person sam = new Person("Sam", "Howler", "Lilly Circle");
+        Person sam = new Person("Sam", "Howler", "76 Lilly Circle");
         people[Constants.SAM] = sam;
 
-        Person jacob = new Person("Jacob", "Harman", "Rocky Road");
+        Person jacob = new Person("Jacob", "Harman", "43 Rocky Road");
         people[Constants.JACOB] = jacob;
 
-        Person ally = new Person("Ally", "Jacobs", "Stone Creek Way");
+        Person ally = new Person("Ally", "Jacobs", "88 Stone Creek Way");
         people[Constants.ALEJANDRA] = ally;
 
         Person min = new Person("Min", "Lee", "Harverd Street");
